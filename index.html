@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OTAINGENIO LAB — Ingeniería Operativa y Formación Estratégica de Pisos</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Transformamos la experiencia operativa invisible de Housekeeping en liderazgo estratégico y rentabilidad. Formación avanzada, CPOR y auditorías LQA.">
+  <meta name="keywords" content="housekeeping, cpor, lqa, gestion hotelera, gobernanta, ingenieria operativa, control financiero hoteleria">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="styles/main.css">
+  
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+  
+  <!-- Background Ambient Glows -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Header & Navigation -->
+  <header id="main-header" class="glass-header">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo" id="brand-logo">
+        <span class="logo-accent">OTAINGENIO</span> <span class="logo-light">LAB</span>
+      </a>
+      
+      <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#hero" class="nav-link active" data-target="hero">Inicio</a>
+        <a href="#tention-section" class="nav-link" data-target="tention-section">La Realidad</a>
+        <a href="#paradigm" class="nav-link" data-target="paradigm">Paradigma</a>
+        <a href="#segmentation" class="nav-link" data-target="segmentation">Para ti</a>
+        <a href="#simulator-section" class="nav-link" data-target="simulator-section">Simulador</a>
+        <a href="#calculator-section" class="nav-link" data-target="calculator-section">Calculadora CPOR</a>
+        <a href="#program-section" class="nav-link" data-target="program-section">Dirección</a>
+        <a href="#resources-section" class="nav-link" data-target="resources-section">Papers Doctrinales</a>
+        <a href="https://campus.otaingenio.es" target="_blank" rel="noopener noreferrer" class="nav-btn-link" id="campus-btn">
+          <span>Acceso Campus</span>
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main id="app-wrapper">
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section full-screen-sec">
+      <div class="section-container hero-grid">
+        <div class="hero-content">
+          <div class="badge-premium animate-fade-in">
+            <span class="badge-dot"></span> Formación aplicada · Datos reales · Sin atajos
+          </div>
+          <h1 class="hero-title animate-slide-up">
+            Ingeniería Operativa <br>
+            <span class="text-gradient">Aplicada a la Gestión Hotelera</span>
+          </h1>
+          <p class="hero-subtitle animate-slide-up-delay">
+            No vendemos atajos corporativos. Ayudamos a gobernantas, subgobernantas y directores a transformar la fatiga invisible del departamento de pisos en gestión científica, control de CPOR y autoridad basada en datos.
+          </p>
+          <div class="hero-actions animate-slide-up-delay-more">
+            <a href="#tention-section" class="btn-primary" id="cta-conoce-sistema">
+              <span>Conoce el sistema</span>
+              <i class="fa-solid fa-arrow-down"></i>
+            </a>
+            <a href="#calculator-section" class="btn-secondary" id="cta-cpor">Probar Diagnóstico CPOR</a>
+          </div>
+        </div>
+        
+        <!-- Interactive Telemetry Widget -->
+        <div class="hero-visual animate-fade-in-right">
+          <div class="telemetry-panel glass-card">
+            <div class="telemetry-header">
+              <div class="pulse-indicator-container">
+                <span class="pulse-indicator"></span>
+                <span class="telemetry-status">OTAINGENIO TELEMETRY V1.0</span>
+              </div>
+              <span class="telemetry-timestamp" id="telemetry-time">16:32:18</span>
+            </div>
+            
+            <div class="telemetry-grid">
+              <div class="telemetry-metric">
+                <span class="metric-label">HAB. AUDITADAS</span>
+                <span class="metric-value font-mono" id="metric-audited">142,390</span>
+                <span class="metric-trend text-green"><i class="fa-solid fa-circle-chevron-up"></i> +12% vs. plan</span>
+              </div>
+              <div class="telemetry-metric">
+                <span class="metric-label">DÉFICIT CPOR PROM.</span>
+                <span class="metric-value font-mono text-red" id="metric-cpor">18.4%</span>
+                <span class="metric-trend text-red"><i class="fa-solid fa-triangle-exclamation"></i> Fuga financiera</span>
+              </div>
+              <div class="telemetry-metric">
+                <span class="metric-label">SOBREESFUERZO</span>
+                <span class="metric-value font-mono text-amber" id="metric-overeffort">4,821h</span>
+                <span class="metric-trend text-amber">Carga invisible</span>
+              </div>
+              <div class="telemetry-metric">
+                <span class="metric-label">EFICIENCIA LQA</span>
+                <span class="metric-value font-mono text-green" id="metric-lqa">92.4%</span>
+                <span class="metric-trend text-green">Calidad auditada</span>
+              </div>
+            </div>
+
+            <!-- Dynamic operational stress line graph -->
+            <div class="telemetry-chart-container">
+              <div class="chart-title">TENSIÓN OPERATIVA Y FLUJO DE TRABAJO (TIEMPO REAL)</div>
+              <div class="svg-chart-wrapper">
+                <svg id="live-telemetry-svg" viewBox="0 0 400 120">
+                  <path id="telemetry-path" d="M 0,60 L 50,60 L 100,60 L 150,60 L 200,60 L 250,60 L 300,60 L 350,60 L 400,60" fill="none" stroke="var(--color-amber)" stroke-width="2" />
+                  <path id="telemetry-area" d="M 0,60 L 50,60 L 100,60 L 150,60 L 200,60 L 250,60 L 300,60 L 350,60 L 400,60 L 400,120 L 0,120 Z" fill="url(#telemetry-gradient)" />
+                  <defs>
+                    <linearGradient id="telemetry-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stop-color="var(--color-amber)" stop-opacity="0.15" />
+                      <stop offset="100%" stop-color="var(--color-amber)" stop-opacity="0.0" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+
+            <div class="telemetry-footer font-mono">
+              <span>PROCESOS ESTABLES: <span class="text-green">ONLINE</span></span>
+              <span>CARGA HOTEL: <span id="telemetry-load">84%</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NUEVO BLOQUE — TENSIÓN OPERATIVA / EMOCIÓN REAL -->
+    <section id="tention-section" class="tention-section section-padding bg-darker border-t">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <span class="section-pre">LA REALIDAD EN PISOS</span>
+          <h2 class="section-title">La Operación Real no se Gestiona <br><span class="text-gradient">desde una Mesa de Despacho</span></h2>
+          <p class="section-desc">El departamento de pisos es la unidad organizativa más compleja del hotel. Sin embargo, su día a día está marcado por fricciones profundas que rara vez se comprenden fuera de la planta.</p>
+        </div>
+
+        <div class="quotes-grid">
+          <div class="quote-card glass-card">
+            <i class="fa-solid fa-quote-left quote-icon"></i>
+            <p class="quote-text font-serif">"Absorbes la presión de dirección arriba, y tienes que resolver lo que explota abajo con el equipo."</p>
+            <span class="quote-author font-mono">— EL DÍA A DÍA EN OPERACIONES</span>
+          </div>
+
+          <div class="quote-card glass-card highlighted-amber">
+            <i class="fa-solid fa-quote-left quote-icon text-amber"></i>
+            <p class="quote-text font-serif">"Cuando dices que las camareras de pisos no llegan a terminar el planing, dirección lo oye como una simple queja. Nosotros te enseñamos a demostrarlo con números."</p>
+            <span class="quote-author font-mono text-amber">— DE LA QUEJA AL ARGUMENTO TÉCNICO</span>
+          </div>
+
+          <div class="quote-card glass-card">
+            <i class="fa-solid fa-quote-left quote-icon"></i>
+            <p class="quote-text font-serif">"Gestionas más personal, más presupuesto y más fatiga de lo que tu cargo formalmente reconoce. Pero te faltan las herramientas financieras para hacerte oír."</p>
+            <span class="quote-author font-mono">— EL VALOR OPERATIVO INVISIBLE</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOQUE — CAMBIO DE PARADIGMA -->
+    <section id="paradigm" class="paradigm-section section-padding border-t">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <span class="section-pre">CAMBIO DE PARADIGMA</span>
+          <h2 class="section-title">Deja de asignar trabajo. <br><span class="text-gradient">Empieza a gestionar el esfuerzo.</span></h2>
+          <p class="section-desc">El problema real no es trabajar más. El problema real es medir de forma incorrecta, ignorando la diferencia entre tareas nominales y fatiga operativa real.</p>
+        </div>
+
+        <div class="paradigm-grid">
+          <div class="paradigm-text-content">
+            <h3 class="paradigm-subtitle font-serif">¿Sigues gestionando por pura intuición?</h3>
+            <p>
+              Asignar un número fijo de habitaciones a una camarera de pisos sin evaluar el tipo de servicio, el estado de salida, las estancias o la fragilidad del equipo es la vía rápida hacia la desmotivación, el agotamiento, los costes ocultos y la pérdida sistemática de calidad.
+            </p>
+            <div class="paradigm-pills">
+              <div class="paradigm-pill">
+                <i class="fa-solid fa-circle-xmark text-red"></i>
+                <div>
+                  <strong>Gestión por intuición:</strong>
+                  <span>Estrés operativo constante, costes CPOR descontrolados, datos invisibles.</span>
+                </div>
+              </div>
+              <div class="paradigm-pill">
+                <i class="fa-solid fa-circle-check text-green"></i>
+                <div>
+                  <strong>Ingeniería Operativa:</strong>
+                  <span>Cargas de trabajo calibradas en créditos, control de costes, rentabilidad asegurada.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Comparison Widget -->
+          <div class="paradigm-visual glass-card">
+            <div class="paradigm-selector">
+              <button class="paradigm-tab-btn active" id="btn-paradigm-old">Intuición Tradicional</button>
+              <button class="paradigm-tab-btn" id="btn-paradigm-new">Ingeniería Operativa</button>
+            </div>
+            
+            <div class="paradigm-chart-box">
+              <div class="paradigm-chart-info">
+                <span class="info-label" id="paradigm-mode-title">Modelo Clásico (18 Habitaciones Fijas)</span>
+                <span class="info-status font-mono" id="paradigm-mode-status">DESEQUILIBRO EXTREMO</span>
+              </div>
+              
+              <!-- Custom Interactive Charts -->
+              <div class="roster-bars" id="roster-bars-container">
+                <!-- Dynamic bars injected by JS -->
+              </div>
+              
+              <div class="roster-summary font-mono">
+                <div class="summary-item">
+                  <span>DESVIACIÓN:</span>
+                  <span id="roster-deviation" class="text-red">±45%</span>
+                </div>
+                <div class="summary-item">
+                  <span>FATIGA CRÍTICA:</span>
+                  <span id="roster-fatigue" class="text-red">SÍ (Cam. 2)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOQUE — PARA TI (SEGMENTACIÓN) -->
+    <section id="segmentation" class="segment-section section-padding bg-darker">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <span class="section-pre">SEGMENTACIÓN PROFESIONAL</span>
+          <h2 class="section-title">Hablemos tu mismo idioma</h2>
+          <p class="section-desc">Selecciona tu perfil operativo para ver cómo Otaingenio Lab puede ayudarte a profesionalizar el departamento con datos y rigor.</p>
+        </div>
+
+        <div class="segment-selector-tabs">
+          <button class="segment-tab-btn active" id="seg-btn-gobernantas">
+            <i class="fa-solid fa-users-gear"></i> Gobernanta / Subgobernanta
+          </button>
+          <button class="segment-tab-btn" id="seg-btn-directores">
+            <i class="fa-solid fa-chart-line"></i> Director General / Financiero
+          </button>
+        </div>
+
+        <div class="segment-content-box glass-card" id="segment-display-card">
+          <!-- Dynamic segmented content will be injected by js/app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOQUE — SOBRE OTAINGENIO LAB -->
+    <section id="about" class="about-section section-padding border-t">
+      <div class="section-container about-grid">
+        <div class="about-visual">
+          <div class="grid-dashboard-mockup glass-card">
+            <div class="mockup-header">
+              <span class="mockup-dot red"></span>
+              <span class="mockup-dot yellow"></span>
+              <span class="mockup-dot green"></span>
+              <span class="mockup-title font-mono">PROCESS_ENGINEERING_DIAGRAM.BI</span>
+            </div>
+            <div class="mockup-body">
+              <div class="diagram-matrix">
+                <div class="matrix-node active">
+                  <span class="node-icon"><i class="fa-solid fa-gauge-high"></i></span>
+                  <span class="node-name">Auditoría LQA</span>
+                </div>
+                <div class="matrix-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                <div class="matrix-node active">
+                  <span class="node-icon"><i class="fa-solid fa-calculator"></i></span>
+                  <span class="node-name">Cálculo CPOR</span>
+                </div>
+                <div class="matrix-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                <div class="matrix-node active">
+                  <span class="node-icon"><i class="fa-solid fa-sliders"></i></span>
+                  <span class="node-name">Créditos de Carga</span>
+                </div>
+              </div>
+              <div class="bi-stats">
+                <div class="bi-stat-box">
+                  <span class="bi-stat-num text-green">14%</span>
+                  <span class="bi-stat-lbl">Ahorro en Costes</span>
+                </div>
+                <div class="bi-stat-box">
+                  <span class="bi-stat-num text-amber">98%</span>
+                  <span class="bi-stat-lbl">Equidad Laboral</span>
+                </div>
+                <div class="bi-stat-box">
+                  <span class="bi-stat-num text-green">100%</span>
+                  <span class="bi-stat-lbl">Trazabilidad Financiera</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <span class="section-pre">SOBRE OTAINGENIO LAB</span>
+          <h2 class="section-title">No somos teóricos académicos.<br><span class="text-gradient">Somos ingenieros de operaciones.</span></h2>
+          <p class="about-intro font-serif">
+            Un laboratorio estratégico creado por profesionales que realmente han vivido y dirigido la operativa real del hotel.
+          </p>
+          <p class="about-text">
+            Otaingenio Lab nace de la necesidad de profesionalizar el housekeeping. Consideramos este departamento como el verdadero **sistema operativo del hotel** y el motor principal de la rentabilidad. No enseñamos a hacer camas; enseñamos a estructurar la operativa basándonos en modelos matemáticos, control de CPOR y auditorías rigurosas LQA.
+          </p>
+          <div class="about-bullets">
+            <div class="bullet-item">
+              <i class="fa-solid fa-microchip text-amber"></i>
+              <span><strong>Metodología de Procesos:</strong> Análisis sistemático de tiempos muertos, recorridos y flujos de trabajo.</span>
+            </div>
+            <div class="bullet-item">
+              <i class="fa-solid fa-graduationcap text-green"></i>
+              <span><strong>Pedagogía Avanzada:</strong> Capacitación ejecutiva enfocada a empoderar a la gobernanta con lenguaje de negocio.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOQUE — SIMULADOR DE DIAGNÓSTICO -->
+    <section id="simulator-section" class="simulator-section section-padding bg-darker border-t">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <span class="section-pre">HERRAMIENTA DE DIAGNÓSTICO OPERATIVO</span>
+          <h2 class="section-title">Simulador de Esfuerzo y Planing</h2>
+          <p class="section-desc">Diseña una jornada ficticia y comprueba por ti misma cómo el reparto clásico por número de habitaciones satura a las camareras frente al modelo basado en créditos de carga de Otaingenio.</p>
+        </div>
+
+        <div class="simulator-card glass-card">
+          <div class="sim-header">
+            <div class="sim-title">
+              <i class="fa-solid fa-cubes text-amber"></i>
+              <span>OTAINGENIO CREDIT DIAGNOSTIC (SIMULACIÓN DE PLANING)</span>
+            </div>
+            <div class="sim-status" id="sim-overall-alert">
+              <i class="fa-solid fa-circle-check text-green"></i> Cargas equilibradas
+            </div>
+          </div>
+
+          <div class="sim-layout">
+            <!-- Left panel: Controls -->
+            <div class="sim-controls">
+              <h3 class="sim-sub">1. Añadir habitaciones al Planing</h3>
+              <div class="sim-add-box">
+                <div class="form-group">
+                  <label for="room-type-select">Tipo de Habitación</label>
+                  <select id="room-type-select">
+                    <option value="estancia" data-credits="1.5">Estancia (1.5 créditos / 20 min)</option>
+                    <option value="salida" data-credits="3.0">Salida (3.0 créditos / 40 min)</option>
+                    <option value="vip" data-credits="4.0">Salida VIP (4.0 créditos / 55 min)</option>
+                    <option value="repaso" data-credits="0.75">Repaso / Cambio (0.75 créditos / 10 min)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="assignee-select">Asignar a:</label>
+                  <select id="assignee-select">
+                    <option value="cam1">Camarera 1 (Ana)</option>
+                    <option value="cam2">Camarera 2 (María)</option>
+                    <option value="cam3">Camarera 3 (Laura)</option>
+                  </select>
+                </div>
+                <button class="btn-primary btn-block" id="btn-add-room">
+                  <i class="fa-solid fa-plus"></i> Añadir Habitación
+                </button>
+              </div>
+
+              <div class="sim-lead-capture glass-card bg-dark font-mono">
+                <div class="lead-header">
+                  <i class="fa-solid fa-circle-arrow-down text-amber"></i>
+                  <span>DESCARGA LA METODOLOGÍA</span>
+                </div>
+                <p class="lead-text">Consigue gratis la plantilla de reparto en créditos en formato Excel para estructurar tu planing diario de forma profesional y justa.</p>
+                <form id="lead-form" action="https://api.web3forms.com/submit" method="POST" class="lead-form-mini">
+                  <!-- API KEY: Reemplazar con la clave generada gratuitamente en web3forms.com -->
+                  <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
+                  <input type="hidden" name="subject" value="Nuevo Lead - Otaingenio Lab: Descarga Metodología">
+                  <input type="hidden" name="from_name" value="Otaingenio Lab">
+                  <input type="hidden" name="redirect" value="https://drive.google.com/file/d/1euxBVjSr4AagIAOGrbCjCZVKJRnuZMZB/view?usp=sharing">
+                  
+                  <input type="email" name="email" placeholder="Introduce tu email" required class="input-dark">
+                  <button type="submit" class="btn-amber-small">Obtener Plantilla</button>
+                </form>
+              </div>
+            </div>
+
+            <!-- Right panel: Live Roster -->
+            <div class="sim-roster">
+              <div class="roster-header">
+                <h3>2. Estado de Cargas del Equipo (Límite Recomendado: 18 Créditos / Día)</h3>
+                <button class="btn-outline-small" id="btn-reset-sim">Reiniciar Roster</button>
+              </div>
+
+              <div class="roster-cards-container">
+                <!-- Camarera 1 -->
+                <div class="roster-staff-card" id="staff-cam1">
+                  <div class="staff-info">
+                    <div>
+                      <span class="staff-name">Camarera 1 (Ana)</span>
+                      <span class="staff-room-count font-mono" id="cam1-room-lbl">0 habs</span>
+                    </div>
+                    <span class="staff-credits font-mono text-green" id="cam1-credits-lbl">0.0 / 18</span>
+                  </div>
+                  <div class="meter-bar-bg">
+                    <div class="meter-bar-fill bg-green" id="cam1-bar" style="width: 0%"></div>
+                  </div>
+                  <div class="staff-rooms-list" id="cam1-rooms-list">
+                    <!-- Rooms badges loaded here -->
+                  </div>
+                </div>
+
+                <!-- Camarera 2 -->
+                <div class="roster-staff-card" id="staff-cam2">
+                  <div class="staff-info">
+                    <div>
+                      <span class="staff-name">Camarera 2 (María)</span>
+                      <span class="staff-room-count font-mono" id="cam2-room-lbl">0 habs</span>
+                    </div>
+                    <span class="staff-credits font-mono text-green" id="cam2-credits-lbl">0.0 / 18</span>
+                  </div>
+                  <div class="meter-bar-bg">
+                    <div class="meter-bar-fill bg-green" id="cam2-bar" style="width: 0%"></div>
+                  </div>
+                  <div class="staff-rooms-list" id="cam2-rooms-list">
+                    <!-- Rooms badges loaded here -->
+                  </div>
+                </div>
+
+                <!-- Camarera 3 -->
+                <div class="roster-staff-card" id="staff-cam3">
+                  <div class="staff-info">
+                    <div>
+                      <span class="staff-name">Camarera 3 (Laura)</span>
+                      <span class="staff-room-count font-mono" id="cam3-room-lbl">0 habs</span>
+                    </div>
+                    <span class="staff-credits font-mono text-green" id="cam3-credits-lbl">0.0 / 18</span>
+                  </div>
+                  <div class="meter-bar-bg">
+                    <div class="meter-bar-fill bg-green" id="cam3-bar" style="width: 0%"></div>
+                  </div>
+                  <div class="staff-rooms-list" id="cam3-rooms-list">
+                    <!-- Rooms badges loaded here -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOQUE — AUDITORÍA DE COSTES CPOR (DIAGNÓSTICO) -->
+    <section id="calculator-section" class="calculator-section section-padding border-t">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <span class="section-pre">DIAGNÓSTICO FINANCIERO EXPRESS</span>
+          <h2 class="section-title">Calculadora de Fuga Financiera y CPOR</h2>
+          <p class="section-desc">Halla el Coste por Habitación Ocupada (CPOR) real de tu hotel. Introduce tus datos y comprueba la pérdida oculta en tu margen operativo diario.</p>
+        </div>
+
+        <div class="calculator-grid">
+          <!-- Left: Sliders -->
+          <div class="calc-inputs glass-card">
+            <h3 class="calc-sub-title font-serif">Parámetros Operativos del Hotel</h3>
+            
+            <div class="slider-group">
+              <div class="slider-info">
+                <label for="slide-rooms">Número de Habitaciones</label>
+                <span class="slider-val font-mono" id="val-rooms">120</span>
+              </div>
+              <input type="range" id="slide-rooms" min="10" max="500" value="120" class="premium-slider">
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-info">
+                <label for="slide-occupancy">Ocupación Promedio Anual</label>
+                <span class="slider-val font-mono" id="val-occupancy">75%</span>
+              </div>
+              <input type="range" id="slide-occupancy" min="10" max="100" value="75" class="premium-slider">
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-info">
+                <label for="slide-wage">Coste Laboral del Personal (Bruto/Hora)</label>
+                <span class="slider-val font-mono" id="val-wage">14.50€</span>
+              </div>
+              <input type="range" id="slide-wage" min="8" max="30" step="0.5" value="14.5" class="premium-slider">
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-info">
+                <label for="slide-time-target">Tiempo Planificado por Habitación (mins)</label>
+                <span class="slider-val font-mono" id="val-time-target">30 min</span>
+              </div>
+              <input type="range" id="slide-time-target" min="15" max="60" value="30" class="premium-slider">
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-info">
+                <label for="slide-time-real">Tiempo Real Empleado (Muestreado - mins)</label>
+                <span class="slider-val font-mono text-amber" id="val-time-real">38 min</span>
+              </div>
+              <input type="range" id="slide-time-real" min="15" max="75" value="38" class="premium-slider">
+            </div>
+          </div>
+
+          <!-- Right: Visual KPI Dashboard -->
+          <div class="calc-results glass-card bg-darker">
+            <h3 class="calc-sub-title font-mono text-center"><i class="fa-solid fa-chart-pie text-green"></i> ANÁLISIS DE CPOR Y MERMAS</h3>
+            
+            <div class="results-grid">
+              <div class="result-tile">
+                <span class="tile-label">CPOR TEÓRICO (CPORt)</span>
+                <span class="tile-val font-mono" id="res-cpor-target">7.25€</span>
+                <span class="tile-sub text-muted">Coste planificado por hab.</span>
+              </div>
+              <div class="result-tile highlighted">
+                <span class="tile-label text-amber">CPOR REAL (CPORr)</span>
+                <span class="tile-val font-mono text-amber" id="res-cpor-real">9.18€</span>
+                <span class="tile-sub" id="res-cpor-diff">+1.93€ (+26.6%)</span>
+              </div>
+            </div>
+
+            <div class="fuga-impact-panel">
+              <div class="fuga-header">
+                <span class="fuga-label">PÉRDIDA ANUAL POR FUGA OPERATIVA (CPOR)</span>
+                <span class="fuga-amount font-mono text-red animate-pulse" id="res-fuga-anual">63,392€</span>
+              </div>
+              <div class="fuga-bar-bg">
+                <div class="fuga-bar-fill bg-red" id="res-fuga-bar" style="width: 26.6%"></div>
+              </div>
+              <p class="fuga-analysis" id="res-fuga-desc">
+                Esta fuga de dinero representa un impacto del **2.1% en tu margen de EBITDA** debido a tiempos muertos no auditados, traslados ineficientes y fragilidad de procesos.
+              </p>
+            </div>
+
+            <div class="calc-footer font-mono">
+              <a href="#program-section" class="btn-green-full">
+                <span>Auditar Operaciones con Otaingenio</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOQUE — PROGRAMA SUPERIOR -->
+    <section id="program-section" class="program-section section-padding bg-darker border-t">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <span class="section-pre">FORMACIÓN DE AUTORIDAD E INGENIERÍA</span>
+          <h2 class="section-title">Programa Superior de Dirección y Operaciones</h2>
+          <p class="section-desc">Deja de gestionar a ciegas. Transfórmate de una supervisora invisible a una líder estratégica que habla el lenguaje de las finanzas y los datos.</p>
+        </div>
+
+        <div class="program-grid">
+          <div class="program-content">
+            <h3 class="program-headline font-serif">Domina la gestión técnica avanzada del departamento de pisos</h3>
+            <p>
+              El Programa Superior de Dirección de Housekeeping de Otaingenio Lab no es un curso básico de limpieza. Es una certificación ejecutiva rigurosa que capacita a gobernantas y subgobernantas en el diseño de sistemas operativos eficientes, control presupuestario y liderazgo estratégico.
+            </p>
+            
+            <div class="curriculum-accordion">
+              <div class="accordion-item">
+                <button class="accordion-header" id="acc-h1">
+                  <span>Módulo 1 — Ingeniería de Procesos y LQA</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="accordion-body" id="acc-b1">
+                  <p>Aprende a realizar un Labor Quality Audit (LQA) riguroso. Diseña cronogramas de tiempos de limpieza precisos analizando los tiempos muertos y optimizando los recorridos de las camareras de pisos para evitar la fatiga.</p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-header" id="acc-h2">
+                  <span>Módulo 2 — Presupuesto y Cálculo CPOR Real</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="accordion-body" id="acc-b2">
+                  <p>Aprende a formular y defender la cuenta de explotación de tu departamento. Conoce la lógica del cálculo CPOR, identifica fugas financieras y comunica tus resultados directamente a la dirección financiera del hotel.</p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-header" id="acc-h3">
+                  <span>Módulo 3 — Sistemas Operativos y Software (PMS)</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="accordion-body" id="acc-b3">
+                  <p>Integración de partes de trabajo inteligentes, control automático de créditos de carga laborar y parametrización de tareas en tu PMS para una gestión sin fricción y basada íntegramente en datos reales.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Transforming Certificate Visual Card -->
+          <div class="program-sales-card glass-card">
+            <div class="sales-badge">CERTIFICACIÓN PROFESIONAL</div>
+            <h4 class="sales-title">Dirección de Housekeeping y Operaciones</h4>
+            <ul class="sales-features">
+              <li><i class="fa-solid fa-circle-check text-green"></i> 100% Online · Mentorías ejecutivas</li>
+              <li><i class="fa-solid fa-circle-check text-green"></i> Plantillas reales de BI y Excel de cálculo CPOR</li>
+              <li><i class="fa-solid fa-circle-check text-green"></i> Certificación oficial de Otaingenio Lab</li>
+              <li><i class="fa-solid fa-circle-check text-green"></i> Acceso a la comunidad privada de Gobernantes</li>
+            </ul>
+            
+            <div class="pricing-panel">
+              <span class="pricing-label">INVERSIÓN EN TU AUTORIDAD</span>
+              <div class="pricing-main">
+                <span class="price-val">750€</span>
+                <span class="price-period">o 3 cuotas sin intereses</span>
+              </div>
+            </div>
+            
+            <button id="btn-open-enrollment" class="btn-primary btn-block">
+              <span>Quiero Preinscribirme</span>
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </button>
+            <span class="sales-note font-mono">Próxima convocatoria: Septiembre 2026. Plazas limitadas.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOQUE — LIBRO / GOBERNANTA DE HOTEL -->
+    <section id="book-section" class="book-section section-padding border-t">
+      <div class="section-container book-grid">
+        <!-- 3D Rotating CSS Book -->
+        <div class="book-visual">
+          <div class="book-wrapper-3d">
+            <div class="book-container-3d" id="css-book-3d">
+              <div class="book-face book-front">
+                <div class="book-title-area">
+                  <span class="book-logo">OTAINGENIO LAB</span>
+                  <h3 class="book-main-title font-serif">La Gobernanta <br>de Hotel</h3>
+                  <p class="book-sub-title">De la gestión operativa al liderazgo estratégico con datos financieros</p>
+                </div>
+                <div class="book-cover-footer">
+                  <span>Javier Otaingenio</span>
+                </div>
+              </div>
+              <div class="book-face book-back">
+                <div class="book-blurb">
+                  <p>Este no es un libro de limpieza. Es un manual técnico de ingeniería organizativa aplicada al corazón económico del hotel: el departamento de pisos.</p>
+                  <p class="book-bar-code font-mono">OTAINGENIO-PRESS-2026</p>
+                </div>
+              </div>
+              <div class="book-face book-spine">
+                <span class="spine-text font-mono">LA GOBERNANTA DE HOTEL — OTAINGENIO LAB</span>
+              </div>
+              <div class="book-face book-top"></div>
+              <div class="book-face book-bottom"></div>
+              <div class="book-face book-left"></div>
+              <div class="book-face book-right"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-info">
+          <span class="section-pre">RECURSO DE MARCA / AUTORIDAD</span>
+          <h2 class="section-title">El Manual Técnico Definitivo</h2>
+          <p class="book-tagline font-serif">"De la gestión operativa al liderazgo estratégico"</p>
+          <p class="book-description">
+            Un manifiesto de lógica matemática, ratios financieros de CPOR, distribución equitativa de cargas de trabajo y teoría del control operacional de pisos. El libro de cabecera para directores que quieren auditar su hotel y gobernantas que exigen su lugar en los comités de dirección.
+          </p>
+          <div class="book-editions font-mono">
+            <div class="edition-badge"><i class="fa-solid fa-book"></i> Tapa Blanda</div>
+            <div class="edition-badge"><i class="fa-solid fa-tablet-screen-button"></i> Ebook / Kindle</div>
+            <div class="edition-badge text-green"><i class="fa-solid fa-heart"></i> Incluido en Kindle Unlimited</div>
+          </div>
+          <a href="https://www.amazon.es/dp/B0G2YL8CCG" target="_blank" rel="noopener noreferrer" class="btn-amber-small">
+            <i class="fa-brands fa-amazon"></i> Comprar en Amazon
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECURSOS / PÁGINAS EDITORIALES INDEPENDIENTES -->
+    <section id="resources-section" class="resources-section section-padding bg-darker border-t">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <span class="section-pre">PANSAMIENTO TÉCNICO Y DOCTRINA</span>
+          <h2 class="section-title">Papers y Manifiestos Operativos</h2>
+          <p class="section-desc">Artículos técnicos sin rodeos. Análisis rigurosos sobre costes, calidad del esfuerzo y las verdades incómodas de la planta hotelera.</p>
+        </div>
+
+        <!-- NEW EDITORIAL LAYOUT CARDS INDEX -->
+        <div class="papers-grid">
+          
+          <div class="paper-card glass-card">
+            <div class="paper-meta">
+              <span class="paper-cat">MANIFIESTO FINANCIERO</span>
+              <span class="paper-date font-mono">01 / ABRIL 2026</span>
+            </div>
+            <h3 class="paper-title font-serif">El EBITDA Dopado: La Gran Mentira del Lujo Hotelero</h3>
+            <p class="paper-excerpt">¿Procede el beneficio de tu hotel de un proceso eficiente o de consumir sistemáticamente la salud de tu plantilla asignando 18 habitaciones fijas?</p>
+            <a href="recursos/el-ebitda-dopado.html" class="paper-cta font-mono">
+              <span>Leer paper doctrinal</span>
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </a>
+          </div>
+
+          <div class="paper-card glass-card">
+            <div class="paper-meta">
+              <span class="paper-cat">INGENIERÍA DE PROCESOS</span>
+              <span class="paper-date font-mono">02 / MAYO 2026</span>
+            </div>
+            <h3 class="paper-title font-serif">Tiempo Efectivo en Habitación: Nominal vs. Real</h3>
+            <p class="paper-excerpt">Analizamos los 10 minutos perdidos por habitación en office deficientes, recorridos no optimizados y esperas de ascensores. Incluye simulador de cronometría.</p>
+            <a href="recursos/tiempo-efectivo-en-habitacion.html" class="paper-cta font-mono">
+              <span>Leer paper doctrinal</span>
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </a>
+          </div>
+
+          <div class="paper-card glass-card">
+            <div class="paper-meta">
+              <span class="paper-cat">ESTABILIDAD OPERATIVA</span>
+              <span class="paper-date font-mono">03 / JUNIO 2026</span>
+            </div>
+            <h3 class="paper-title font-serif">Fragilidad Operativa: El Esfuerzo Invisible en Pisos</h3>
+            <p class="paper-excerpt">El hotel parece funcionar con suavidad hasta que alguien falta y el planing colapsa. Simula la carga de redistribución de bajas en tiempo real.</p>
+            <a href="recursos/fragilidad-operativa.html" class="paper-cta font-mono">
+              <span>Leer paper doctrinal</span>
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </a>
+          </div>
+
+          <div class="paper-card glass-card">
+            <div class="paper-meta">
+              <span class="paper-cat">AUDITORÍA DE CALIDAD</span>
+              <span class="paper-date font-mono">04 / FEBRERO 2026</span>
+            </div>
+            <h3 class="paper-title font-serif">LQA no es CPOR: Eficiencia vs. Excelencia</h3>
+            <p class="paper-excerpt">Si reduces el CPOR a ciegas destruyes tu LQA, y si disparas el LQA sin control logístico destruyes tu margen. Aprende el equilibrio paramétrico.</p>
+            <a href="recursos/lqa-no-es-cpor.html" class="paper-cta font-mono">
+              <span>Leer paper doctrinal</span>
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </a>
+          </div>
+
+          <div class="paper-card glass-card paper-card-full-width">
+            <div class="paper-meta">
+              <span class="paper-cat">DOCTRINA OTAINGENIO</span>
+              <span class="paper-date font-mono">05 / ENERO 2026</span>
+            </div>
+            <div class="paper-full-layout">
+              <div>
+                <h3 class="paper-title font-serif">El Manifiesto de la Ingeniería Operativa de Pisos</h3>
+                <p class="paper-excerpt">Housekeeping no es un servicio de limpieza: es el verdadero sistema operativo financiero del hotel. Conoce nuestros 4 pilares fundacionales.</p>
+              </div>
+              <a href="recursos/manifiesto-otaingenio.html" class="paper-cta font-mono">
+                <span>Leer manifiesto</span>
+                <i class="fa-solid fa-arrow-right-long"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="main-footer" class="border-t">
+    <div class="footer-container">
+      <div class="footer-brand-column">
+        <a href="#hero" class="brand-logo">
+          <span class="logo-accent">OTAINGENIO</span> <span class="logo-light">LAB</span>
+        </a>
+        <p class="footer-brand-desc">Ingeniería operativa, auditoría LQA y optimización matemática para el departamento de pisos.</p>
+        <span class="doctrina-libera-badge font-serif">"La doctrina es libre"</span>
+      </div>
+
+      <div class="footer-links-column">
+        <h4 class="footer-title font-mono">Ecosistema</h4>
+        <ul class="footer-links">
+          <li><a href="#hero">Inicio</a></li>
+          <li><a href="#paradigm">El Paradigma</a></li>
+          <li><a href="#simulator-section">Simulador Roster</a></li>
+          <li><a href="#calculator-section">Calculadora CPOR</a></li>
+          <li><a href="#program-section">Programa Superior</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-column">
+        <h4 class="footer-title font-mono">Contacto e Info</h4>
+        <ul class="footer-links">
+          <li><a href="#resources-section">Manifiestos y Papers</a></li>
+          <li><a href="#book-section">El Libro</a></li>
+          <li><a href="mailto:info@otaingenio.es"><i class="fa-solid fa-envelope"></i> info@otaingenio.es</a></li>
+          <li><a href="https://www.linkedin.com/in/juan-carlos-otaiza-chirinos-2025b811a/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom font-mono">
+      <span>© 2026 Otaingenio Lab. Todos los derechos reservados.</span>
+      <span>Diseñado con Rigor y Datos.</span>
+    </div>
+  </footer>
+
+  <!-- Enrollment Modal Overlay -->
+  <div id="enrollment-modal" class="modal-overlay">
+    <div class="modal-content glass-card">
+      <button class="modal-close-btn" id="btn-close-modal" aria-label="Close modal">&times;</button>
+      <h3 class="modal-title font-serif">Preinscripción al Programa Superior</h3>
+      <p class="modal-subtitle">Introduce tus datos y te contactaremos personalmente para evaluar tu perfil y formalizar tu matrícula.</p>
+      
+      <form action="https://api.web3forms.com/submit" method="POST" class="modal-form">
+        <!-- API KEY: Reemplazar con la clave generada gratuitamente en web3forms.com -->
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
+        <input type="hidden" name="subject" value="Nueva Preinscripción - Programa Superior Otaingenio">
+        <input type="hidden" name="from_name" value="Otaingenio Lab">
+        <input type="hidden" name="redirect" value="https://campus.otaingenio.es">
+        
+        <div class="form-group">
+          <label for="modal-name">Nombre Completo</label>
+          <input type="text" id="modal-name" name="name" placeholder="Ej. María Gómez" required class="input-dark">
+        </div>
+        
+        <div class="form-group">
+          <label for="modal-email">Correo Electrónico</label>
+          <input type="email" id="modal-email" name="email" placeholder="Ej. maria@hotel.com" required class="input-dark">
+        </div>
+        
+        <div class="form-group">
+          <label for="modal-role">Cargo Actual</label>
+          <input type="text" id="modal-role" name="role" placeholder="Ej. Gobernanta / Subgobernanta / Director" required class="input-dark">
+        </div>
+        
+        <div class="form-group">
+          <label for="modal-hotel">Hotel / Empresa</label>
+          <input type="text" id="modal-hotel" name="hotel" placeholder="Ej. Hotel Gran Lujo 5*" required class="input-dark">
+        </div>
+
+        <div class="form-group">
+          <label for="modal-message">Mensaje o Consultas (Opcional)</label>
+          <textarea id="modal-message" name="message" rows="3" placeholder="Cuéntanos brevemente las necesidades de tu departamento..." class="input-dark"></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary btn-block">
+          <span>Enviar Preinscripción</span>
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+      
+      <div class="modal-alternative font-mono">
+        O si lo prefieres, puedes rellenar el <a href="https://forms.gle/AYaReUqtFSFzHKH68" target="_blank" rel="noopener noreferrer" class="text-amber">formulario oficial de Google Forms</a>.
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
