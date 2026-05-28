@@ -2639,3 +2639,208 @@ ul {
 .modal-alternative a:hover {
   text-decoration: underline;
 }
+
+/* ==========================================
+   PREMIUM WARM LIGHT THEME SYSTEM (AMMAN/LUXURY STYLE)
+   ========================================== */
+.light-theme {
+  --color-bg-deep: #faf8f5; /* Warm premium ivory/linen */
+  --color-bg-dark: #f3efe6; /* Elegant soft sand */
+  --color-bg-card: rgba(255, 255, 255, 0.75); /* Clean white card */
+  --color-bg-card-hover: rgba(255, 255, 255, 0.95);
+  
+  --color-petroleum: #3e2e25; /* Deep warm bronze/chocolate */
+  --color-petroleum-light: #594437; /* Medium sand bronze */
+  
+  --color-amber: #c4752a; /* Slightly deeper warm golden-amber for contrast */
+  --color-amber-hover: #ab621e;
+  --color-green: #218c4e; /* KPIs high-contrast warm green */
+  --color-green-hover: #1b7440;
+  --color-red: #b8382b; /* Terracotta red */
+  --color-red-hover: #a12f23;
+  
+  --color-text: #2d241d; /* Deep executive charcoal-chocolate text */
+  --color-text-muted: #74675b; /* Warm sand grey text */
+  --color-border: rgba(62, 46, 37, 0.12); /* Slightly warm-tinted light borders */
+  --color-border-glow: rgba(196, 117, 42, 0.35);
+  
+  --shadow-premium: 0 15px 35px rgba(62, 46, 37, 0.07), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+/* Light Theme Component Adjustments */
+.light-theme .ambient-glow {
+  opacity: 0.08; /* Subtler warm glowing light effects */
+}
+
+.light-theme .glow-1 {
+  background: var(--color-amber);
+}
+
+.light-theme .glow-2 {
+  background: var(--color-amber-hover);
+}
+
+.light-theme .glow-3 {
+  background: var(--color-petroleum-light);
+}
+
+.light-theme .glass-header {
+  background: rgba(250, 248, 245, 0.8);
+  border-bottom: 1px solid rgba(62, 46, 37, 0.08);
+}
+
+.light-theme .glass-header.scrolled {
+  background: rgba(250, 248, 245, 0.95);
+}
+
+.light-theme .brand-logo .logo-light {
+  color: var(--color-text);
+}
+
+.light-theme .mobile-menu-toggle {
+  color: var(--color-text);
+}
+
+/* Form Inputs */
+.light-theme .input-dark, 
+.light-theme .modal-form .input-dark {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(62, 46, 37, 0.15) !important;
+  color: var(--color-text) !important;
+}
+
+.light-theme .input-dark:focus,
+.light-theme .modal-form .input-dark:focus {
+  border-color: var(--color-amber) !important;
+  background: #ffffff !important;
+}
+
+/* Telemetry & Charts */
+.light-theme .telemetry-panel {
+  box-shadow: 0 20px 45px rgba(62, 46, 37, 0.1);
+}
+
+.light-theme .telemetry-footer {
+  border-top-color: rgba(62, 46, 37, 0.08);
+}
+
+/* Sliders & Tabs */
+.light-theme .tab-btn, 
+.light-theme .paradigm-tab-btn, 
+.light-theme .segment-tab-btn {
+  background: rgba(62, 46, 37, 0.05);
+  color: var(--color-text-muted);
+  border: 1px solid rgba(62, 46, 37, 0.06);
+}
+
+.light-theme .tab-btn.active, 
+.light-theme .paradigm-tab-btn.active, 
+.light-theme .segment-tab-btn.active {
+  background: var(--color-petroleum) !important;
+  color: #ffffff !important;
+  border-color: var(--color-petroleum) !important;
+}
+
+/* Roster Cards */
+.light-theme .roster-staff-card {
+  background: rgba(62, 46, 37, 0.03) !important;
+  border: 1px solid rgba(62, 46, 37, 0.08) !important;
+}
+
+.light-theme .roster-staff-card.overload {
+  background: rgba(184, 56, 43, 0.06) !important;
+  border-color: rgba(184, 56, 43, 0.25) !important;
+}
+
+.light-theme .meter-bar-bg {
+  background: rgba(62, 46, 37, 0.08) !important;
+}
+
+.light-theme .sim-lead-capture.glass-card {
+  background: rgba(62, 46, 37, 0.03) !important;
+  border: 1px solid rgba(62, 46, 37, 0.08) !important;
+}
+
+/* Secondary Button Overrides */
+.light-theme .btn-secondary {
+  background: rgba(62, 46, 37, 0.04);
+  border: 1px solid rgba(62, 46, 37, 0.08);
+  color: var(--color-text);
+}
+
+.light-theme .btn-secondary:hover {
+  background: rgba(62, 46, 37, 0.08);
+  border-color: rgba(62, 46, 37, 0.18);
+}
+
+/* KPI Overrides */
+.light-theme .fuga-impact-panel {
+  background: rgba(184, 56, 43, 0.04);
+  border: 1px solid rgba(184, 56, 43, 0.12);
+}
+
+.light-theme .fuga-bar-bg {
+  background: rgba(62, 46, 37, 0.08);
+}
+
+.light-theme .pricing-panel {
+  background: rgba(62, 46, 37, 0.03);
+  border: 1px solid rgba(62, 46, 37, 0.08);
+}
+
+/* Accordions */
+.light-theme .accordion-header {
+  background: rgba(62, 46, 37, 0.03);
+  border-color: rgba(62, 46, 37, 0.06);
+}
+
+.light-theme .accordion-item {
+  border-color: rgba(62, 46, 37, 0.08);
+}
+
+/* Scrollbar overrides */
+.light-theme ::-webkit-scrollbar-track {
+  background: var(--color-bg-deep);
+}
+
+.light-theme ::-webkit-scrollbar-thumb {
+  background: rgba(62, 46, 37, 0.2);
+}
+
+.light-theme ::-webkit-scrollbar-thumb:hover {
+  background: var(--color-amber);
+}
+
+/* Articles and timeline overrides */
+.light-theme .chrono-timeline {
+  background: rgba(62, 46, 37, 0.08);
+}
+
+.light-theme .chrono-segment.administrativo {
+  background: #7f8c8d;
+}
+
+.light-theme .chrono-legend .legend-dot.grey {
+  background: #7f8c8d;
+}
+
+.light-theme .modal-alternative {
+  border-top-color: rgba(62, 46, 37, 0.08);
+}
+
+/* CSS 3D Book overrides for sand aesthetics */
+.light-theme .book-spine {
+  background: #3e2e25 !important;
+}
+
+.light-theme .book-back {
+  background: #3e2e25 !important;
+}
+
+.light-theme .book-blurb {
+  color: #f7f5f0 !important;
+}
+
+.light-theme .book-bar-code {
+  color: #a59c94 !important;
+}
