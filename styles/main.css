@@ -2912,3 +2912,15 @@ ul {
 .light-theme .book-bar-code {
   color: #a59c94 !important;
 }
+
+/* Light Theme overrides for the Acceso Campus navigation button contrast */
+.light-theme .nav-btn-link {
+  color: #faf8f5;
+  border-color: rgba(250, 248, 245, 0.2);
+}
+
+.light-theme .nav-btn-link:hover {
+  color: #ffffff;
+  background: var(--color-petroleum-light);
+}
+
