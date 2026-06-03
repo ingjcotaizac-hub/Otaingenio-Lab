@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>El Manifiesto de la Ingeniería Operativa de Pisos — OTAINGENIO LAB</title>
+  <title>Manifiesto Otaingenio: 7 Principios de Ingeniería para Housekeeping — OTAINGENIO LAB</title>
   
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Declaración de principios doctrinales y fundacionales de Otaingenio Lab para profesionalizar Housekeeping con datos y rigor.">
+  <meta name="description" content="El marco doctrinario para rediseñar Housekeeping desde la ingeniería de procesos. Todo lo que hacemos en Otaingenio —el libro, el curso, el software— nace de este documento.">
   
   <!-- Canonical URL -->
   <link rel="canonical" href="https://www.otaingenio.es/recursos/manifiesto-otaingenio">
@@ -17,21 +17,21 @@
   <!-- Open Graph -->
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://www.otaingenio.es/recursos/manifiesto-otaingenio">
-  <meta property="og:title" content="El Manifiesto de la Ingeniería Operativa de Pisos — OTAINGENIO LAB">
-  <meta property="og:description" content="Declaración de principios doctrinales y fundacionales de Otaingenio Lab para profesionalizar Housekeeping con datos y rigor.">
-  <meta property="og:image" content="https://www.otaingenio.es/images/og-cover.png">
+  <meta property="og:title" content="Manifiesto Otaingenio: 7 Principios de Ingeniería para Housekeeping — OTAINGENIO LAB">
+  <meta property="og:description" content="El marco doctrinario para rediseñar Housekeeping desde la ingeniería de procesos. Todo lo que hacemos en Otaingenio —el libro, el curso, el software— nace de este documento.">
+  <meta property="og:image" content="/images/og-cover.png">
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="Otaingenio Lab">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="El Manifiesto de la Ingeniería Operativa de Pisos — OTAINGENIO LAB">
-  <meta name="twitter:description" content="Declaración de principios doctrinales y fundacionales de Otaingenio Lab para profesionalizar Housekeeping con datos y rigor.">
-  <meta name="twitter:image" content="https://www.otaingenio.es/images/og-cover.png">
+  <meta name="twitter:title" content="Manifiesto Otaingenio: 7 Principios de Ingeniería para Housekeeping — OTAINGENIO LAB">
+  <meta name="twitter:description" content="El marco doctrinario para rediseñar Housekeeping desde la ingeniería de procesos. Todo lo que hacemos en Otaingenio —el libro, el curso, el software— nace de este documento.">
+  <meta name="twitter:image" content="/images/og-cover.png">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="../images/favicon.png">
-  <link rel="apple-touch-icon" href="../images/favicon.png">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,7 +39,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
   
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="/styles/main.css">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
@@ -51,6 +51,286 @@
     gtag('js', new Date());
     gtag('config', 'G-158QYGR870');
   </script>
+
+  <style>
+    /* --- CUSTOM VARIABLES FOR THIS PAPER --- */
+    :root {
+      --primary-color: var(--color-bg-deep, #3e2e25);
+      --accent-color: var(--color-amber, #c4752a);
+      --bg-light: #fbf9f6;
+      --border-radius: 8px;
+    }
+
+    .paper-subtitle {
+      font-size: 1.35rem;
+      color: var(--color-text-muted, #7e6c61);
+      margin-top: 10px;
+      font-weight: 300;
+      border-left: 4px solid var(--accent-color);
+      padding-left: 20px;
+      line-height: 1.4;
+    }
+
+    /* --- INTRODUCCIÓN --- */
+    .intro-text {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      margin-bottom: 35px;
+      border-left: 4px solid var(--primary-color);
+      padding-left: 20px;
+      background-color: rgba(62, 46, 37, 0.03);
+      padding: 24px;
+      border-radius: 0 8px 8px 0;
+    }
+
+    /* --- SECCIÓN: QUÉ CONTIENE --- */
+    .content-box {
+      background-color: var(--color-bg-card, rgba(255, 255, 255, 0.5));
+      padding: 25px;
+      border-radius: var(--border-radius);
+      border-left: 5px solid var(--primary-color);
+      border: 1px solid var(--color-border, rgba(62, 46, 37, 0.1));
+      border-left-width: 5px;
+      border-left-color: var(--primary-color);
+      margin-bottom: 30px;
+      backdrop-filter: blur(8px);
+    }
+
+    .content-box ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 15px 0 0 0;
+    }
+
+    .content-box li {
+      margin-bottom: 12px;
+      padding-left: 25px;
+      position: relative;
+      font-size: 0.95rem;
+    }
+
+    .content-box li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--accent-color);
+      font-weight: bold;
+    }
+
+    .emphasis {
+      display: block;
+      margin-top: 25px;
+      font-weight: bold;
+      text-align: center;
+      font-size: 1.1em;
+      color: var(--primary-color);
+      font-family: var(--font-serif), serif;
+    }
+
+    /* --- SECCIÓN: 7 PRINCIPIOS --- */
+    .principles-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 30px;
+      margin-bottom: 40px;
+    }
+
+    .principle-card {
+      background: var(--color-bg-card, rgba(255, 255, 255, 0.5));
+      border: 1px solid var(--color-border, rgba(62, 46, 37, 0.1));
+      padding: 25px 20px;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-sm, 0 4px 10px rgba(0,0,0,0.02));
+      transition: all 0.3s ease;
+      flex: 1 1 300px;
+      max-width: 380px;
+      text-align: justify;
+      display: flex;
+      flex-direction: column;
+      backdrop-filter: blur(8px);
+    }
+
+    .principle-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md, 0 10px 30px rgba(0,0,0,0.08));
+      border-color: var(--accent-color);
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .principle-number {
+      font-size: 0.85em;
+      color: var(--accent-color);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      display: block;
+      margin-bottom: 12px;
+      text-align: left;
+      font-family: var(--font-mono), monospace;
+    }
+    
+    .principle-text {
+      flex-grow: 1;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+
+    /* --- SECCIÓN: DESCARGAS --- */
+    .download-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      margin-top: 25px;
+      margin-bottom: 40px;
+    }
+
+    .download-card {
+      flex: 1;
+      min-width: 280px;
+      border: 1px solid var(--color-border, rgba(62, 46, 37, 0.1));
+      padding: 30px 25px;
+      border-radius: var(--border-radius);
+      text-align: center;
+      background-color: var(--color-bg-card, rgba(255, 255, 255, 0.5));
+      backdrop-filter: blur(8px);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+    }
+
+    .download-card:hover {
+      border-color: var(--accent-color);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .download-card h3 {
+      font-family: var(--font-serif), serif;
+      font-size: 1.25rem;
+      margin-bottom: 15px;
+      color: var(--primary-color);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      background-color: var(--primary-color);
+      color: white !important;
+      text-decoration: none;
+      border-radius: 30px;
+      margin-top: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-size: 0.85rem;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-sm);
+      border: 2px solid var(--primary-color);
+    }
+
+    .btn:hover {
+      background-color: white;
+      color: var(--primary-color) !important;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn.disabled {
+      background-color: rgba(62, 46, 37, 0.15);
+      border-color: transparent;
+      color: var(--color-text-muted, #7e6c61) !important;
+      cursor: not-allowed;
+      pointer-events: none;
+      box-shadow: none;
+      transform: none;
+    }
+
+    /* --- TABLA DE RECURSOS --- */
+    .resource-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      background: var(--color-bg-card, rgba(255, 255, 255, 0.5));
+      backdrop-filter: blur(8px);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      border: 1px solid var(--color-border, rgba(62, 46, 37, 0.1));
+      box-shadow: var(--shadow-sm);
+    }
+
+    .resource-table th, .resource-table td {
+      padding: 18px 24px;
+      text-align: left;
+      border-bottom: 1px solid var(--color-border, rgba(62, 46, 37, 0.08));
+    }
+
+    .resource-table th {
+      background-color: var(--primary-color);
+      color: white;
+      font-weight: 700;
+      font-family: var(--font-serif), serif;
+      letter-spacing: 0.5px;
+      border-bottom: none;
+    }
+    
+    .resource-table tr:hover td {
+      background-color: rgba(62, 46, 37, 0.03);
+    }
+
+    .resource-table a {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: 700;
+      transition: color 0.2s ease;
+    }
+
+    .resource-table a:hover {
+      color: var(--primary-color);
+      text-decoration: underline;
+    }
+
+    /* --- NOTA FINAL (FOOTER NOTE) --- */
+    .footer-note {
+      margin-top: 50px;
+      padding: 35px;
+      background-color: rgba(62, 46, 37, 0.04);
+      text-align: center;
+      border-radius: var(--border-radius);
+      border-top: 4px solid var(--accent-color);
+      border-left: 1px solid var(--color-border, rgba(62, 46, 37, 0.05));
+      border-right: 1px solid var(--color-border, rgba(62, 46, 37, 0.05));
+      border-bottom: 1px solid var(--color-border, rgba(62, 46, 37, 0.05));
+    }
+
+    .footer-note h3 {
+      font-family: var(--font-serif), serif;
+      color: var(--primary-color);
+      font-size: 1.25rem;
+      margin-bottom: 15px;
+      margin-top: 0;
+    }
+
+    .footer-note p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 10px;
+      color: var(--color-text);
+    }
+
+    .how-what {
+      text-align: center;
+      margin: 40px 0;
+      font-weight: 600;
+      font-size: 1.25rem;
+      line-height: 1.8;
+      color: var(--primary-color);
+      font-family: var(--font-serif), serif;
+    }
+  </style>
 </head>
 <body class="light-theme">
 
@@ -61,10 +341,10 @@
   <!-- Header -->
   <header id="main-header" class="glass-header scrolled">
     <div class="header-container">
-      <a href="../index.html" class="brand-logo">
+      <a href="/" class="brand-logo">
         <span class="logo-accent">OTAINGENIO</span> <span class="logo-light">LAB</span>
       </a>
-      <a href="../index.html" class="nav-btn-link">
+      <a href="/" class="nav-btn-link">
         <i class="fa-solid fa-arrow-left"></i>
         <span>Volver a Inicio</span>
       </a>
@@ -74,7 +354,7 @@
   <!-- Reading Container -->
   <main class="paper-reading-container glass-card" style="margin-top: 130px;">
     
-    <a href="../index.html" class="back-to-home">
+    <a href="/" class="back-to-home">
       <i class="fa-solid fa-arrow-left-long"></i> Volver a Otaingenio Lab
     </a>
 
@@ -84,46 +364,119 @@
           <span class="paper-cat">DOCTRINA OTAINGENIO</span>
           <span class="paper-date font-mono">05 / ENERO 2026</span>
         </div>
-        <h1 class="paper-title font-serif" style="font-size: 2.8rem; line-height: 1.2;">El Manifiesto de la Ingeniería Operativa de Pisos</h1>
+        <h1 class="paper-title font-serif" style="font-size: 2.8rem; line-height: 1.2;">Manifiesto Otaingenio: 7 Principios de Ingeniería para Housekeeping</h1>
+        <div class="paper-subtitle">El marco doctrinario para rediseñar Housekeeping desde la ingeniería de procesos.</div>
       </header>
 
-      <img src="../images/luxury_bed_detail.png" alt="Detalle de Habitación de Lujo" class="paper-opening-img" loading="lazy">
+      <img src="/images/luxury_bed_detail.png" alt="Detalle de Habitación de Lujo" class="paper-opening-img" loading="lazy">
 
       <section class="paper-content">
-        <p>Durante décadas, el departamento de pisos (Housekeeping) ha sido tratado como un mal necesario en la hotelería: un centro de costes pesado, invisible, desarticulado y enfocado exclusivamente en tareas de limpieza básica.</p>
-        
-        <p>En **Otaingenio Lab** declaramos la guerra a esta concepción obsoleta, injusta y dañina para el negocio y el bienestar laboral. Este es nuestro manifiesto fundacional e ideológico:</p>
-        
-        <blockquote>"El departamento de pisos no es una mera contrata de limpieza. Es el verdadero sistema operativo, financiero y de control de calidad del hotel."</blockquote>
-        
-        <h2>Nuestros Principios Doctrinales</h2>
-        
-        <ol>
-          <li><strong>Los datos son la única autoridad legítima:</strong> La intuición gerencial del despacho y la experiencia puramente subjetiva son pésimas guías operativas. Cada tiempo de paso, cada metro de recorrido y cada fatiga deben medirse científicamente y expresarse en créditos matemáticos de esfuerzo equilibrado.</li>
-          <li><strong>La gobernanta es una ejecutiva financiera:</strong> Dejamos atrás el concepto de la simple "supervisora de limpieza". Empoderamos a las gobernantas y subgobernantas dotándolas de lenguaje de negocio, ratios analíticos y criterio de procesos. Su lugar natural está en el comité de dirección defendiendo recursos basándose en matemáticas, no en suposiciones.</li>
-          <li><strong>El esfuerzo físico es cuantificable y respetable:</strong> Repartir habitaciones por puro azar o aplicar un número plano (e.g. 18 habitaciones fijas) es una irresponsabilidad. Calibramos las estancias, salidas y VIPs mediante un modelo equilibrado que protege la salud laboral y asegura la excelencia del servicio diario.</li>
-          <li><strong>La calidad LQA es rentable:</strong> Auditar bajo estándares estrictos LQA no es un gasto caprichoso de marca, sino el escudo que protege la reputación online, potencia la tarifa media diaria (ADR) y maximiza el EBITDA sostenible a largo plazo del hotel.</li>
-        </ol>
-        
-        <h2>Un Lugar para la Excelencia</h2>
-        <p>No creemos en parches temporales, atajos corporativos ni en formaciones online baratas y genéricas. Creemos en la ingeniería aplicada con rigor, en la formación técnica avanzada y en el respeto profundo por las personas que hacen brillar cada rincón del hotel.</p>
-        
-        <p>Porque profesionalizar el departamento de pisos no es solo una estrategia de ahorro; es el verdadero pilar sobre el que se sostiene el prestigio de la hotelería de excelencia.</p>
-        
-        <div style="margin-top: 50px; display: flex; flex-direction: column; align-items: center; gap: 15px;">
-          <div style="font-family: var(--font-serif); font-size: 1.6rem; color: var(--color-amber); font-style: italic;">
-            "La doctrina es libre."
+        <div class="intro-text">
+          <p>Este no es un manual de instrucciones.</p>
+          <p>Es el código fuente de una metodología que propone gestionar Housekeeping como lo que realmente es: un sistema de ingeniería que protege activos, personas y rentabilidad. Todo lo que hacemos en Otaingenio —el libro, el curso, el software— nace de este documento.</p>
+        </div>
+
+        <h2>¿Qué contiene?</h2>
+        <div class="content-box">
+          <p>El <strong>Manifiesto completo (+100 páginas)</strong> establece:</p>
+          <ul>
+            <li>Los principios físicos, económicos y operativos del departamento.</li>
+            <li>El análisis de por qué el modelo actual (basado en urgencia) falla.</li>
+            <li>La propuesta de un nuevo modelo (basado en diseño).</li>
+            <li>Las matemáticas detrás de la carga de trabajo real.</li>
+            <li>El marco financiero (CPOR, EBITDA) aplicado a Housekeeping.</li>
+          </ul>
+          <span class="emphasis">No es teoría académica. Es ingeniería aplicable.</span>
+        </div>
+
+        <h2>Los 7 Principios (Resumen)</h2>
+        <div class="principles-grid">
+          <div class="principle-card">
+            <span class="principle-number">Principio 1</span>
+            <span class="principle-text">El proceso protege a la persona.</span>
           </div>
-          <a href="https://drive.google.com/file/d/1euxBVjSr4AagIAOGrbCjCZVKJRnuZMZB/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="padding: 10px 20px; font-size: 0.85rem;">
-            <i class="fa-solid fa-file-pdf"></i>
-            <span>Descargar Manifiesto en PDF</span>
-          </a>
+          <div class="principle-card">
+            <span class="principle-number">Principio 2</span>
+            <span class="principle-text">La calidad se diseña, no se improvisa.</span>
+          </div>
+          <div class="principle-card">
+            <span class="principle-number">Principio 3</span>
+            <span class="principle-text">El dato financiero vence a la intuición operativa.</span>
+          </div>
+          <div class="principle-card">
+            <span class="principle-number">Principio 4</span>
+            <span class="principle-text">La eficiencia nunca compromete la dignidad.</span>
+          </div>
+          <div class="principle-card">
+            <span class="principle-number">Principio 5</span>
+            <span class="principle-text">Housekeeping es Gestión de Activos, no solo limpieza.</span>
+          </div>
+          <div class="principle-card">
+            <span class="principle-number">Principio 6</span>
+            <span class="principle-text">La Gobernanta es Ingeniera de Procesos.</span>
+          </div>
+          <div class="principle-card">
+            <span class="principle-number">Principio 7</span>
+            <span class="principle-text">La tecnología es el instrumento, la metodología es el marco.</span>
+          </div>
+        </div>
+
+        <h2>Acceso Libre</h2>
+        <p style="font-size: 1.1em;">La doctrina es libre. El conocimiento no debería tener muro de pago. Si algo de esto te ayuda a gestionar mejor tu departamento, úsalo. Sin pedir permiso.</p>
+        
+        <div class="download-section">
+          <div class="download-card">
+            <h3>📄 Documento de Lanzamiento</h3>
+            <p>Los principios fundamentales en formato condensado (7 páginas).</p>
+            <a href="https://drive.google.com/file/d/1euxBVjSr4AagIAOGrbCjCZVKJRnuZMZB/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn">→ Descargar PDF</a>
+          </div>
+          <div class="download-card">
+            <h3>📚 Documento Completo</h3>
+            <p>El marco doctrinario íntegro (+100 páginas), con las matemáticas y la filosofía.</p>
+            <a href="#" class="btn disabled">→ Próximamente disponible</a>
+          </div>
+        </div>
+
+        <h2>Si quieres ir más allá del documento</h2>
+        <table class="resource-table">
+          <thead>
+            <tr>
+              <th>Necesidad</th>
+              <th>Recurso</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Aplicar los principios paso a paso</td>
+              <td><a href="https://www.amazon.es/dp/B0G2YL8CCG" target="_blank" rel="noopener noreferrer">📘 Manual de Gobernanta en Amazon</a></td>
+            </tr>
+            <tr>
+              <td>Entrenar con simuladores reales</td>
+              <td><a href="/direccion-housekeeping">🎓 Programa Superior</a></td>
+            </tr>
+            <tr>
+              <td>Implementar con tecnología</td>
+              <td><span style="color: var(--color-text-muted, #7e6c61); cursor: default;">🔧 Software Otaingenio (Próximamente)</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="how-what">
+          El Manifiesto es el "qué" y el "por qué".<br>
+          El libro, el curso y el software son el "cómo".
+        </div>
+
+        <div class="footer-note">
+          <h3>Una nota sobre el modelo</h3>
+          <p>Hay quien regala un PDF a cambio de tu correo para luego venderte algo.</p>
+          <p><strong style="color: var(--primary-color);">Aquí es al revés: el conocimiento está abierto. Si te sirve, aplícalo.</strong></p>
+          <p style="margin-top: 20px;">Los productos existen para quienes quieran acompañamiento estructurado, no para quienes solo buscan información.</p>
         </div>
       </section>
 
       <footer style="margin-top: 60px; border-top: 1px solid var(--color-border); padding-top: 30px; display: flex; justify-content: space-between; align-items: center;">
         <span class="doctrina-libera-badge font-serif" style="font-size: 1.2rem;">"La doctrina es libre"</span>
-        <a href="../index.html#program-section" class="btn-primary" style="padding: 10px 20px; font-size: 0.85rem;">
+        <a href="/direccion-housekeeping" class="btn-primary" style="padding: 10px 20px; font-size: 0.85rem;">
           <span>Inscribirse en el Programa</span>
           <i class="fa-solid fa-arrow-right-long"></i>
         </a>
@@ -138,14 +491,15 @@
       <span>La doctrina es libre.</span>
     </div>
   </footer>
+
   <!-- Structured Data: Article -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "El Manifiesto de la Ingeniería Operativa de Pisos",
-    "description": "Declaración de principios doctrinales y fundacionales de Otaingenio Lab para profesionalizar Housekeeping con datos y rigor.",
-    "image": "https://www.otaingenio.es/images/og-cover.png",
+    "headline": "Manifiesto Otaingenio: 7 Principios de Ingeniería para Housekeeping",
+    "description": "El marco doctrinario para rediseñar Housekeeping desde la ingeniería de procesos. Todo lo que hacemos en Otaingenio —el libro, el curso, el software— nace de este documento.",
+    "image": "/images/og-cover.png",
     "author": {
       "@type": "Organization",
       "name": "Otaingenio Lab"
@@ -158,7 +512,7 @@
         "url": "https://www.otaingenio.es/images/logo.png"
       }
     },
-    "datePublished": "2026-01-01",
+    "datePublished": "2026-01-05",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://www.otaingenio.es/recursos/manifiesto-otaingenio"
