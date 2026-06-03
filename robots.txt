@@ -1,0 +1,8 @@
+# robots.txt — Otaingenio Lab
+# https://www.otaingenio.es
+
+User-agent: *
+Allow: /
+Disallow: /js/
+
+Sitemap: https://www.otaingenio.es/sitemap.xml

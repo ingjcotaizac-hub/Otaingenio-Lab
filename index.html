@@ -7,11 +7,39 @@
   
   <!-- SEO Meta Tags -->
   <meta name="description" content="Transformamos la experiencia operativa invisible de Housekeeping en liderazgo estratégico y rentabilidad. Formación avanzada, CPOR y auditorías LQA.">
-  <meta name="keywords" content="housekeeping, cpor, lqa, gestion hotelera, gobernanta, ingenieria operativa, control financiero hoteleria">
+  <meta name="keywords" content="housekeeping, cpor, lqa, gestion hotelera, gobernanta, ingenieria operativa, control financiero hoteleria, housekeeping management, hotel operations, coste por habitacion ocupada, auditoria lqa, programa direccion housekeeping">
   
-  <!-- Google Fonts -->
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.otaingenio.es/">
+
+  <!-- Robots -->
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.otaingenio.es/">
+  <meta property="og:title" content="OTAINGENIO LAB — Ingeniería Operativa y Formación Estratégica de Pisos">
+  <meta property="og:description" content="Transformamos la experiencia operativa invisible de Housekeeping en liderazgo estratégico y rentabilidad. Formación avanzada, CPOR y auditorías LQA.">
+  <meta property="og:image" content="https://www.otaingenio.es/images/og-cover.png">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Otaingenio Lab">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="OTAINGENIO LAB — Ingeniería Operativa y Formación Estratégica de Pisos">
+  <meta name="twitter:description" content="Transformamos la experiencia operativa invisible de Housekeeping en liderazgo estratégico y rentabilidad.">
+  <meta name="twitter:image" content="https://www.otaingenio.es/images/og-cover.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+
+  <!-- Preconnect for external resources -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
   
   <!-- Custom Stylesheets -->
@@ -19,9 +47,21 @@
   
   <!-- FontAwesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-158QYGR870"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-158QYGR870');
+  </script>
 </head>
 <body class="light-theme">
   
+  <!-- Skip to content (Accessibility) -->
+  <a href="#app-wrapper" class="skip-to-content">Saltar al contenido principal</a>
+
   <!-- Background Ambient Glows -->
   <div class="ambient-glow glow-1"></div>
   <div class="ambient-glow glow-2"></div>
@@ -152,7 +192,7 @@
         </div>
 
         <div class="tention-visual-container">
-          <img src="images/editorial_hallway_cart.png" alt="Realidad de planta en hoteles de lujo" class="tention-editorial-img">
+          <img src="images/editorial_hallway_cart.png" alt="Realidad de planta en hoteles de lujo" class="tention-editorial-img" loading="lazy">
         </div>
 
         <div class="quotes-grid">
@@ -273,7 +313,7 @@
       <div class="section-container about-grid">
         <div class="about-visual">
           <div class="about-image-card glass-card">
-            <img src="images/floor_director_tablet.png" alt="Directora de Operaciones de Pisos" class="about-human-img">
+            <img src="images/floor_director_tablet.png" alt="Directora de Operaciones de Pisos" class="about-human-img" loading="lazy">
             <div class="about-image-caption">DIAGNOSTICANDO LA OPERATIVA EN PLANTA EN TIEMPO REAL</div>
           </div>
         </div>
@@ -546,29 +586,29 @@
             
             <div class="curriculum-accordion">
               <div class="accordion-item">
-                <button class="accordion-header" id="acc-h1">
+                <button class="accordion-header" id="acc-h1" aria-expanded="false" aria-controls="acc-b1">
                   <span>Módulo 1 — Ingeniería de Procesos y LQA Forense</span>
-                  <i class="fa-solid fa-chevron-down"></i>
+                  <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
                 </button>
-                <div class="accordion-body" id="acc-b1">
+                <div class="accordion-body" id="acc-b1" role="region" aria-labelledby="acc-h1">
                   <p>Aprende a realizar un Labor Quality Audit (LQA) riguroso. Diseña cronogramas de tiempos de limpieza precisos analizando los tiempos muertos y optimizando los recorridos de las camareras de pisos para evitar la fatiga.</p>
                 </div>
               </div>
               <div class="accordion-item">
-                <button class="accordion-header" id="acc-h2">
+                <button class="accordion-header" id="acc-h2" aria-expanded="false" aria-controls="acc-b2">
                   <span>Módulo 2 — Presupuesto y CPOR Real: Lenguaje Financiero</span>
-                  <i class="fa-solid fa-chevron-down"></i>
+                  <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
                 </button>
-                <div class="accordion-body" id="acc-b2">
+                <div class="accordion-body" id="acc-b2" role="region" aria-labelledby="acc-h2">
                   <p>Aprende a formular y defender la cuenta de explotación de tu departamento. Conoce la lógica del cálculo CPOR, identifica fugas financieras y comunica tus resultados directamente a la dirección financiera del hotel.</p>
                 </div>
               </div>
               <div class="accordion-item">
-                <button class="accordion-header" id="acc-h3">
+                <button class="accordion-header" id="acc-h3" aria-expanded="false" aria-controls="acc-b3">
                   <span>Módulo 3 — Soberanía Operativa y Liderazgo de Autoridad</span>
-                  <i class="fa-solid fa-chevron-down"></i>
+                  <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
                 </button>
-                <div class="accordion-body" id="acc-b3">
+                <div class="accordion-body" id="acc-b3" role="region" aria-labelledby="acc-h3">
                   <p>Integración de partes de trabajo inteligentes, control automático de créditos de carga laborar y parametrización de tareas en tu PMS para una gestión sin fricción y basada íntegramente en datos reales.</p>
                 </div>
               </div>
@@ -834,7 +874,57 @@
     </div>
   </div>
 
+  <!-- Structured Data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Otaingenio Lab",
+    "url": "https://www.otaingenio.es",
+    "logo": "https://www.otaingenio.es/images/logo.png",
+    "description": "Laboratorio de ingeniería operativa, auditoría LQA y optimización matemática para el departamento de pisos hotelero.",
+    "email": "info@otaingenio.es",
+    "sameAs": [
+      "https://www.linkedin.com/in/juan-carlos-otaiza-chirinos-2025b811a/"
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: Course -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Programa Superior de Dirección de Housekeeping y Operaciones",
+    "description": "Certificación profesional de autoridad ejecutiva diseñada para hacer visible tu verdadero impacto económico en el hotel, dotándote de las métricas de ingeniería operativa y el lenguaje financiero necesarios.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Otaingenio Lab",
+      "url": "https://www.otaingenio.es"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "250",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/PreOrder"
+    },
+    "educationalLevel": "Advanced",
+    "inLanguage": "es"
+  }
+  </script>
+
+  <!-- Structured Data: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Otaingenio Lab",
+    "url": "https://www.otaingenio.es"
+  }
+  </script>
+
   <!-- Scripts -->
   <script type="module" src="js/app.js"></script>
 </body>
 </html>
+

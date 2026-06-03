@@ -94,6 +94,26 @@ ul {
   list-style: none;
 }
 
+/* Skip to Content — Accessibility */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-amber);
+  color: var(--color-bg-deep);
+  padding: 12px 24px;
+  border-radius: var(--border-radius-sm);
+  font-weight: 700;
+  font-size: 0.9rem;
+  z-index: 10000;
+  transition: top 0.3s ease;
+}
+
+.skip-to-content:focus {
+  top: 10px;
+}
+
 .font-mono {
   font-family: 'Courier New', Courier, monospace;
 }
