@@ -1,0 +1,23 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/inicio", "destination": "/#hero", "permanent": true },
+    { "source": "/la-realidad", "destination": "/#tention-section", "permanent": true },
+    { "source": "/paradigma", "destination": "/#paradigm", "permanent": true },
+    { "source": "/para-ti", "destination": "/#segmentation", "permanent": true },
+    { "source": "/simulador", "destination": "/#simulator-section", "permanent": true },
+    { "source": "/calculadora-cpor", "destination": "/#calculator-section", "permanent": true },
+    { "source": "/direccion", "destination": "/#program-section", "permanent": true },
+    { "source": "/papers-doctrinales", "destination": "/#resources-section", "permanent": true },
+    { "source": "/herramientas", "destination": "/#simulator-section", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/recursos/ebitda-dopado", "destination": "/recursos/el-ebitda-dopado.html" },
+    { "source": "/recursos/matematicas-cuadran-sistema-falla", "destination": "/recursos/fragilidad-operativa.html" },
+    { "source": "/recursos/lqa-no-cpor", "destination": "/recursos/lqa-no-es-cpor.html" },
+    { "source": "/recursos/lqa-housekeeping", "destination": "/recursos/lqa-housekeeping.html" },
+    { "source": "/recursos/cpor", "destination": "/recursos/lqa-no-es-cpor.html" },
+    { "source": "/recursos/tiempo-efectivo-habitacion", "destination": "/recursos/tiempo-efectivo-en-habitacion.html" },
+    { "source": "/recursos/tiempo-efectivo-habitacion/", "destination": "/recursos/tiempo-efectivo-en-habitacion.html" }
+  ]
+}

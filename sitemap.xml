@@ -11,35 +11,42 @@
 
   <!-- Papers Doctrinales -->
   <url>
-    <loc>https://www.otaingenio.es/recursos/el-ebitda-dopado.html</loc>
+    <loc>https://www.otaingenio.es/recursos/ebitda-dopado</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.otaingenio.es/recursos/tiempo-efectivo-en-habitacion.html</loc>
+    <loc>https://www.otaingenio.es/recursos/tiempo-efectivo-habitacion</loc>
     <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.otaingenio.es/recursos/fragilidad-operativa.html</loc>
+    <loc>https://www.otaingenio.es/recursos/matematicas-cuadran-sistema-falla</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.otaingenio.es/recursos/lqa-no-es-cpor.html</loc>
+    <loc>https://www.otaingenio.es/recursos/lqa-no-cpor</loc>
     <lastmod>2026-02-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.otaingenio.es/recursos/manifiesto-otaingenio.html</loc>
+    <loc>https://www.otaingenio.es/recursos/lqa-housekeeping</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.otaingenio.es/recursos/manifiesto-otaingenio</loc>
     <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
