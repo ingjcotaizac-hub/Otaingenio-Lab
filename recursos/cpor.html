@@ -3,30 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LQA: Labor Quality Audit - Auditoría de Calidad — OTAINGENIO LAB</title>
+  <title>Qué es el CPOR y cómo calcularlo en Housekeeping — OTAINGENIO LAB</title>
   
   <!-- SEO Meta Tags -->
-  <meta name="description" content="El LQA (Labor Quality Audit) es el detector de mentiras del departamento. Mide la brecha estructural entre el estándar exigido y los recursos reales asignados.">
+  <meta name="description" content="¿Sabes cuánto te cuesta realmente limpiar cada habitación ocupada? El CPOR (Cost Per Occupied Room) es la métrica financiera que transforma a la Gobernanta en una interlocutora estratégica de Dirección. Aprende a calcularlo paso a paso.">
   
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://www.otaingenio.es/recursos/lqa-housekeeping">
+  <link rel="canonical" href="https://www.otaingenio.es/recursos/cpor">
   
   <!-- Robots -->
   <meta name="robots" content="index, follow">
   
   <!-- Open Graph -->
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://www.otaingenio.es/recursos/lqa-housekeeping">
-  <meta property="og:title" content="LQA: Labor Quality Audit - Auditoría de Calidad — OTAINGENIO LAB">
-  <meta property="og:description" content="El LQA (Labor Quality Audit) es el detector de mentiras del departamento. Mide la brecha estructural entre el estándar exigido y los recursos reales asignados.">
+  <meta property="og:url" content="https://www.otaingenio.es/recursos/cpor">
+  <meta property="og:title" content="Qué es el CPOR y cómo calcularlo en Housekeeping — OTAINGENIO LAB">
+  <meta property="og:description" content="¿Sabes cuánto te cuesta realmente limpiar cada habitación ocupada? El CPOR (Cost Per Occupied Room) es la métrica financiera que transforma a la Gobernanta en una interlocutora estratégica de Dirección. Aprende a calcularlo paso a paso.">
   <meta property="og:image" content="https://www.otaingenio.es/images/og-cover.png">
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="Otaingenio Lab">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="LQA: Labor Quality Audit - Auditoría de Calidad — OTAINGENIO LAB">
-  <meta name="twitter:description" content="El LQA (Labor Quality Audit) es el detector de mentiras del departamento. Mide la brecha estructural entre el estándar exigido y los recursos reales asignados.">
+  <meta name="twitter:title" content="Qué es el CPOR y cómo calcularlo en Housekeeping — OTAINGENIO LAB">
+  <meta name="twitter:description" content="¿Sabes cuánto te cuesta realmente limpiar cada habitación ocupada? El CPOR (Cost Per Occupied Room) es la métrica financiera que transforma a la Gobernanta en una interlocutora estratégica de Dirección. Aprende a calcularlo paso a paso.">
   <meta name="twitter:image" content="https://www.otaingenio.es/images/og-cover.png">
   
   <!-- Favicon -->
@@ -53,12 +53,11 @@
   </script>
 
   <style>
-    /* --- CUSTOM VARIABLES FOR THIS PAPER (BRAND INTEGRATION) --- */
+    /* --- CUSTOM VARIABLES FOR THIS PAPER --- */
     :root {
       --primary-color: var(--color-bg-deep, #3e2e25);
       --accent-color: var(--color-amber, #c4752a);
-      --alert-color: #b23b3b; /* A premium warm red for alerts */
-      --bg-light: #fbf9f6; /* Soft warm background */
+      --bg-light: #fbf9f6;
       --border-radius: 8px;
       --success-color: #2e7d32;
     }
@@ -71,7 +70,6 @@
       border-left: 4px solid var(--accent-color);
       padding-left: 20px;
       line-height: 1.4;
-      font-family: var(--font-sans), sans-serif;
     }
 
     /* --- INTRODUCCIÓN --- */
@@ -79,76 +77,46 @@
       font-size: 1.15rem;
       line-height: 1.7;
       margin-bottom: 35px;
-      border-left: 4px solid var(--alert-color);
+      border-left: 4px solid var(--primary-color);
       padding-left: 20px;
-      background-color: rgba(178, 59, 59, 0.04);
+      background-color: rgba(62, 46, 37, 0.03);
       padding: 24px;
       border-radius: 0 8px 8px 0;
     }
 
-    /* --- DIAGRAMA VISUAL --- */
-    .gap-visual-box {
+    /* --- FÓRMULA --- */
+    .formula-box {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 25px;
+      text-align: center;
+      border-radius: var(--border-radius);
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin: 30px 0;
+      box-shadow: var(--shadow-sm);
+      font-family: var(--font-serif), serif;
+      letter-spacing: 0.5px;
+    }
+
+    .components-list {
       background-color: var(--color-bg-card, rgba(255, 255, 255, 0.5));
       border: 1px solid var(--color-border, rgba(62, 46, 37, 0.1));
       padding: 30px;
       border-radius: var(--border-radius);
-      margin: 35px 0;
-      box-shadow: var(--shadow-sm, 0 4px 20px rgba(0,0,0,0.03));
       backdrop-filter: blur(8px);
+      margin: 30px 0;
     }
 
-    .bar-group {
-      margin-bottom: 24px;
+    .components-list ul {
+      padding-left: 20px;
+      margin: 15px 0 0 0;
     }
 
-    .bar-label {
-      font-weight: 600;
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 8px;
-      font-size: 0.85em;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: var(--color-text-muted, #7e6c61);
-    }
-
-    .progress-track {
-      background-color: rgba(62, 46, 37, 0.1);
-      height: 28px;
-      border-radius: 14px;
-      overflow: hidden;
-    }
-
-    .progress-fill {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      padding-right: 15px;
-      color: white;
-      font-weight: 700;
-      font-size: 0.75em;
-      font-family: var(--font-mono, monospace);
-      letter-spacing: 0.5px;
-    }
-
-    .fill-standard { 
-      width: 95%; 
-      background: linear-gradient(90deg, var(--primary-color) 0%, #5d483c 100%); 
-    }
-    .fill-resources { 
-      width: 65%; 
-      background: linear-gradient(90deg, var(--success-color) 0%, #4caf50 100%); 
-    }
-    
-    .gap-alert {
-      text-align: center;
-      color: var(--alert-color);
-      font-weight: 800;
-      margin-top: 20px;
-      border-top: 1px dashed rgba(62, 46, 37, 0.15);
-      padding-top: 18px;
-      letter-spacing: 0.5px;
+    .components-list li {
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+      line-height: 1.6;
     }
 
     /* --- TABLA COMPARATIVA --- */
@@ -173,7 +141,7 @@
     }
 
     .comparison-table th.col-bad { background-color: #8c827a; }
-    .comparison-table th.col-good { background-color: var(--primary-color); }
+    .comparison-table th.col-good { background-color: var(--accent-color); }
 
     .comparison-table td {
       padding: 20px;
@@ -186,39 +154,28 @@
     }
 
     .comparison-table tr:last-child td { border-bottom: none; }
-
-    /* --- LA TRIADA --- */
-    .triad-box {
-      background-color: var(--color-bg-card, rgba(255, 255, 255, 0.5));
-      border: 1px solid var(--color-border, rgba(62, 46, 37, 0.1));
+    
+    /* --- EJEMPLO PRÁCTICO --- */
+    .example-box {
+      border: 2px dashed var(--accent-color);
       padding: 30px;
       border-radius: var(--border-radius);
+      background-color: rgba(255, 255, 255, 0.3);
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .calc-result {
+      font-size: 1.65rem;
+      color: var(--primary-color);
+      font-weight: 800;
       text-align: center;
-      margin: 40px 0;
-      backdrop-filter: blur(8px);
-    }
-
-    .triad-grid {
-      display: flex;
-      gap: 15px;
-      justify-content: center;
-      margin-top: 20px;
-      flex-wrap: wrap;
-    }
-
-    .triad-item {
-      background: rgba(255, 255, 255, 0.6);
-      padding: 20px;
+      margin: 25px 0;
+      padding: 15px;
+      background-color: var(--color-bg-card, rgba(255, 255, 255, 0.7));
       border-radius: var(--border-radius);
       border: 1px solid var(--color-border, rgba(62, 46, 37, 0.1));
-      flex: 1;
-      min-width: 200px;
-      transition: all 0.3s ease;
-    }
-    
-    .triad-item.active {
-      border: 2px solid var(--alert-color);
-      box-shadow: 0 4px 12px rgba(178, 59, 59, 0.1);
+      font-family: var(--font-mono), monospace;
     }
 
     /* --- CTA PRINCIPAL --- */
@@ -229,7 +186,7 @@
       text-align: center;
       border-radius: var(--border-radius);
       margin: 45px 0;
-      box-shadow: var(--shadow-md, 0 8px 30px rgba(0,0,0,0.08));
+      box-shadow: var(--shadow-md);
     }
 
     .main-cta-box p {
@@ -349,135 +306,119 @@
     <article class="paper-reading-body">
       <header class="paper-reading-header">
         <div class="paper-meta" style="margin-bottom: 10px;">
-          <span class="paper-cat">AUDITORÍA DE CALIDAD</span>
-          <span class="paper-date font-mono">05 / MAYO 2026</span>
+          <span class="paper-cat">MÉTRICAS FINANCIERAS</span>
+          <span class="paper-date font-mono">15 / MARZO 2026</span>
         </div>
-        <h1 class="paper-title font-serif" style="font-size: 2.8rem; line-height: 1.2;">LQA: Labor Quality Audit - Auditoría de Calidad</h1>
-        <div class="paper-subtitle">La métrica de la Calidad Latente y la Sostenibilidad Operativa.</div>
+        <h1 class="paper-title font-serif" style="font-size: 2.8rem; line-height: 1.2;">Qué es el CPOR y cómo calcularlo en Housekeeping</h1>
+        <div class="paper-subtitle">La métrica financiera que convierte a la Gobernanta en interlocutora estratégica de Dirección.</div>
       </header>
 
       <img src="../images/luxury_bed_detail.png" alt="Detalle de Habitación de Lujo" class="paper-opening-img" loading="lazy">
 
       <section class="paper-content">
         <div class="intro-text">
-          <p>El <strong>LQA</strong> (Labor Quality Audit) es el detector de mentiras del departamento. Mientras las auditorías tradicionales miran la Estética (¿está limpio?), el LQA mide la Física (¿es sostenible?). Mide la <strong>Deuda Técnica</strong>: la distancia exacta entre el estándar que exiges en el papel y los recursos reales que asignas para cumplirlo. Si el Excel dice que sí, pero el activo se deteriora, el LQA es quien enciende la alerta.</p>
+          <p>La mayoría de Gobernantas saben cuántas habitaciones limpian al día. <br>
+          <strong>Muy pocas saben cuánto cuesta limpiar cada una.</strong></p>
+          <p>El <strong>CPOR</strong> (Cost Per Occupied Room) es la métrica que conecta la operativa diaria con el lenguaje de Dirección General: rentabilidad.</p>
         </div>
 
-        <h2>El Problema de la "Calidad Percibida"</h2>
-        <p>En Housekeeping, la calidad suele darse por supuesta hasta que aparecen las quejas. Pero cuando medimos la <strong>Calidad Latente</strong>, a menudo descubrimos una brecha peligrosa:</p>
+        <h2>¿Qué es el CPOR?</h2>
+        <p>Es el coste total del departamento de pisos (Housekeeping) dividido entre el número de habitaciones ocupadas en un período determinado.</p>
 
-        <div class="gap-visual-box">
-          <div class="bar-group">
-            <div class="bar-label">
-              <span>ESTÁNDAR EXIGIDO (Marca/Dirección)</span>
-              <span>Alta Exigencia</span>
-            </div>
-            <div class="progress-track">
-              <div class="progress-fill fill-standard">EXPECTATIVA (100%)</div>
-            </div>
-          </div>
-
-          <div class="bar-group">
-            <div class="bar-label">
-              <span>RECURSOS REALES (Tiempo/Personal)</span>
-              <span>Baja Capacidad</span>
-            </div>
-            <div class="progress-track">
-              <div class="progress-fill fill-resources">REALIDAD OPERATIVA</div>
-            </div>
-          </div>
-
-          <div class="gap-alert">
-            ⚠️ BRECHA DE CALIDAD LATENTE DETECTADA<br>
-            <span style="font-size:0.85em; font-weight:normal; color:var(--color-text-muted);">Aquí es donde ocurren los fallos invisibles y la degradación del activo.</span>
-          </div>
+        <div class="formula-box">
+          CPOR = Costes Totales ÷ Habitaciones Ocupadas
         </div>
-        
-        <p style="margin-top: 20px; font-size: 0.95em; border-left: 4px solid var(--alert-color); padding-left: 15px;">
-          <strong>Nota técnica:</strong> El LQA no devuelve una puntuación ni un “aprobado/suspenso”. No mide estética ni percepción inmediata. Mide la <strong>brecha estructural</strong> entre el estándar exigido y los recursos reales asignados. Si esa brecha existe, la calidad visible puede mantenerse… a costa de generar <strong>deuda técnica operativa</strong>.
-        </p>
 
-        <h2>El cambio de discurso</h2>
-        <p>Sin LQA, las reuniones con Dirección son batallas de opiniones. Con LQA, son análisis de ingeniería.</p>
+        <div class="components-list">
+          <strong>¿Qué incluye el "Coste Total"?</strong><br>
+          Para que el dato sea real y útil en tus análisis estratégicos, debes sumar:
+          <ul>
+            <li><strong>Salarios directos:</strong> Salario Bruto + Seguridad Social + Prorrateo de pagas del personal de pisos (camareras y valets).</li>
+            <li><strong>Amenities:</strong> El coste de reposición de todos los consumibles y detalles de habitación.</li>
+            <li><strong>Lavandería:</strong> Coste de lavado, tanto si es por servicio externo (renting/lavado) como interno (energía, químicos, personal).</li>
+            <li><strong>Productos de limpieza:</strong> Productos químicos, útiles de limpieza y consumibles del departamento.</li>
+            <li><strong>Subcontratación:</strong> Si utilizas personal externo de ETT o contratas servicios auxiliares directos.</li>
+          </ul>
+        </div>
+
+        <h2>¿Por qué importa? (La diferencia estratégica)</h2>
+        <p>El CPOR te permite justificar decisiones y necesidades operativas con números concretos en lugar de quejas basadas en la pura fatiga. Observa cómo cambia la calidad del discurso ante Dirección:</p>
 
         <table class="comparison-table">
           <thead>
             <tr>
-              <th class="col-bad">SIN LQA (Sensaciones)</th>
-              <th class="col-good">CON LQA (Datos)</th>
+              <th class="col-bad">SIN CPOR (Operativo)</th>
+              <th class="col-good">CON CPOR (Estratégico)</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>“El equipo va muy justo, no llegamos.”</td>
-              <td>“El 18% de los fallos de limpieza se concentran en baños por falta de tiempo específico.”</td>
+              <td>"Necesito más personal, no llegamos a las salidas."</td>
+              <td>"Cada habitación nos cuesta 8,50€; con un refuerzo en office el CPOR bajaría a 7,90€ por optimización de flujo."</td>
             </tr>
             <tr>
-              <td>“La ocupación nos está matando.”</td>
-              <td>“Las salidas tienen un 2,3× más incidencias que las estancias: el tiempo asignado es insuficiente.”</td>
+              <td>"La ocupación nos está matando, vamos desbordadas."</td>
+              <td>"El coste de Housekeeping por habitación ha subido un 12% este mes debido a incidencias de recorridos y baja productividad."</td>
             </tr>
             <tr>
-              <td>“La calidad ha bajado.”</td>
-              <td>“Al bajar tiempos sin control (TEH), la tasa de error estructural ha subido un 27%.”</td>
+              <td>"La calidad ha bajado mucho últimamente."</td>
+              <td>"El CPOR se ha comprimido por debajo del límite operativo saludable y la tasa de incidencias LQA ha subido un 22% por correlación."</td>
             </tr>
           </tbody>
         </table>
 
-        <h2>La Tríada de la Ingeniería</h2>
-        <p>El LQA es la pieza que falta. Conecta lo que nadie suele conectar:</p>
-
-        <div class="triad-box">
-          <div class="triad-grid">
-            <div class="triad-item">
-              <strong>⏱️ TEH</strong><br>
-              <span style="font-size:0.9em; color:var(--color-text-muted);">¿Cuánto tiempo tenemos?</span>
-            </div>
-            <div class="triad-item">
-              <strong>💰 CPOR</strong><br>
-              <span style="font-size:0.9em; color:var(--color-text-muted);">¿Cuánto nos cuesta?</span>
-            </div>
-            <div class="triad-item active">
-              <strong>📋 LQA</strong><br>
-              <span style="font-size:0.9em; color:var(--alert-color); font-weight:bold;">¿Es sostenible?</span>
-            </div>
+        <h2>Ejemplo Práctico</h2>
+        <div class="example-box">
+          <p><strong>Datos reales del mes de un hotel tipo:</strong></p>
+          <ul>
+            <li>Costes totales del departamento de pisos: <strong>42.000 €</strong></li>
+            <li>Habitaciones ocupadas registradas en el mes: <strong>4.800</strong></li>
+          </ul>
+          
+          <div class="calc-result">
+            42.000 € ÷ 4.800 habs = 8,75 € <span style="font-size:0.6em; font-weight:normal; color:var(--color-text-muted);">/ hab. ocupada</span>
           </div>
-          <p style="margin-top:20px; font-size:0.95em;">
-            Sin LQA, no sabes si tu CPOR bajo es <strong>eficiencia</strong> o <strong>peligro</strong>.<br>
-            Sin LQA, no sabes si reducir tiempos está <strong>destruyendo la experiencia</strong>.
-          </p>
+
+          <p><strong>Con este dato objetivo en la mano, ahora puedes preguntar:</strong></p>
+          <ul style="margin-bottom:0;">
+            <li>¿Es este coste competitivo frente a nuestro set competitivo de la plaza?</li>
+            <li>¿Cómo evoluciona esta métrica mes a mes en función de la estacionalidad?</li>
+            <li>¿Qué impacto financiero sufrirá el margen si la ocupación del hotel baja al 60%?</li>
+          </ul>
         </div>
 
         <div class="main-cta-box">
-          <h3 style="color:white; margin-top:0; font-family:var(--font-serif); font-size:1.8rem; margin-bottom:15px;">La calidad no se defiende. Se mide.</h3>
-          <p>Aprende a diseñar sistemas de auditoría que detecten fallos estructurales, no culpables. Domina la tríada completa en el Programa Superior.</p>
-          <a href="https://www.otaingenio.es/direccion-housekeeping" target="_blank" class="btn-large">🎓 Ver Programa Superior</a>
+          <h3 style="color:white; margin-top:0; font-family:var(--font-serif); font-size:1.8rem; margin-bottom:15px;">Calcula tu propio CPOR</h3>
+          <p>No necesitas ser directora financiera para controlar los números de tu departamento. Hemos diseñado una herramienta sencilla para que introduzcas tus datos reales y obtengas tu coste real de forma inmediata.</p>
+          <a href="../index.html#calculator-section" class="btn-large">🔧 Acceder a la Calculadora</a>
         </div>
 
-        <h2>Recursos Relacionados</h2>
-        
+        <h2>Para Profundizar</h2>
+        <p>El dato financiero es una herramienta de poder excelente, pero requieres una base organizativa sólida y metódica para poder gestionarlo sin fisuras.</p>
+
         <div class="steps-grid">
           <div class="step-card">
             <div>
-              <span class="step-tag">1: TIEMPO</span>
-              <p>Descubre por qué tu turno de 8 horas en realidad solo tiene 6 horas productivas.</p>
+              <span class="step-tag">PASO 1: Gestión Operativa</span>
+              <p>Antes de optimizar costes, debes estructurar los procesos diarios y liderar al equipo. El libro es tu base fundamental para la excelencia.</p>
             </div>
-            <a href="tiempo-efectivo-habitacion.html" class="resource-link">⏱ Ver Tiempo Efectivo (TEH)</a>
+            <a href="https://www.amazon.es/dp/B0G2YL8CCG" target="_blank" class="resource-link">📘 Ver Libro en Amazon</a>
           </div>
 
           <div class="step-card">
             <div>
-              <span class="step-tag">2: COSTE</span>
-              <p>Calcula cuánto te cuesta realmente cada habitación ocupada con nuestra calculadora.</p>
+              <span class="step-tag">PASO 2: Ingeniería Económica</span>
+              <p>Si ya controlas la operativa y buscas aprender a construir presupuestos, analizar desviaciones y calcular el CPOR detallado en comités.</p>
             </div>
-            <a href="../index.html#calculator-section" class="resource-link">💰 Ver Coste (CPOR)</a>
+            <a href="../index.html#program-section" class="resource-link">🎓 Programa Superior de Ingeniería</a>
           </div>
 
           <div class="step-card">
             <div>
-              <span class="step-tag">3: ESTRATEGIA</span>
-              <p>Descarga el Manifiesto de la Ingeniería de Housekeeping para entender el modelo completo.</p>
+              <span class="step-tag">PASO 3: Simulación</span>
+              <p>Prueba nuestro simulador gratuito. Modifica los parámetros de ocupación y salarios para ver cómo impacta en tu CPOR.</p>
             </div>
-            <a href="manifiesto-otaingenio.html" class="resource-link">📄 Leer Manifiesto</a>
+            <a href="../index.html#calculator-section" class="resource-link">🔧 Ir a la Calculadora CPOR</a>
           </div>
         </div>
       </section>
@@ -505,8 +446,8 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "LQA: Labor Quality Audit - Auditoría de Calidad",
-    "description": "El LQA (Labor Quality Audit) es el detector de mentiras del departamento. Mide la brecha estructural entre el estándar exigido y los recursos reales asignados.",
+    "headline": "Qué es el CPOR y cómo calcularlo en Housekeeping",
+    "description": "¿Sabes cuánto te cuesta realmente limpiar cada habitación ocupada? El CPOR (Cost Per Occupied Room) es la métrica financiera que transforma a la Gobernanta en una interlocutora estratégica de Dirección. Aprende a calcularlo paso a paso.",
     "image": "https://www.otaingenio.es/images/og-cover.png",
     "author": {
       "@type": "Organization",
@@ -520,10 +461,10 @@
         "url": "https://www.otaingenio.es/images/logo.png"
       }
     },
-    "datePublished": "2026-05-15",
+    "datePublished": "2026-03-15",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.otaingenio.es/recursos/lqa-housekeeping"
+      "@id": "https://www.otaingenio.es/recursos/cpor"
     }
   }
   </script>

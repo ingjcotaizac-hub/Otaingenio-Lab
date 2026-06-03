@@ -8,16 +8,11 @@
     { "source": "/simulador", "destination": "/#simulator-section", "permanent": true },
     { "source": "/calculadora-cpor", "destination": "/#calculator-section", "permanent": true },
     { "source": "/direccion", "destination": "/#program-section", "permanent": true },
+    { "source": "/direccion-housekeeping", "destination": "/#program-section", "permanent": true },
     { "source": "/papers-doctrinales", "destination": "/#resources-section", "permanent": true },
-    { "source": "/herramientas", "destination": "/#simulator-section", "permanent": true }
-  ],
-  "rewrites": [
-    { "source": "/recursos/ebitda-dopado", "destination": "/recursos/el-ebitda-dopado.html" },
-    { "source": "/recursos/matematicas-cuadran-sistema-falla", "destination": "/recursos/fragilidad-operativa.html" },
-    { "source": "/recursos/lqa-no-cpor", "destination": "/recursos/lqa-no-es-cpor.html" },
-    { "source": "/recursos/lqa-housekeeping", "destination": "/recursos/lqa-housekeeping.html" },
-    { "source": "/recursos/cpor", "destination": "/recursos/lqa-no-es-cpor.html" },
-    { "source": "/recursos/tiempo-efectivo-habitacion", "destination": "/recursos/tiempo-efectivo-en-habitacion.html" },
-    { "source": "/recursos/tiempo-efectivo-habitacion/", "destination": "/recursos/tiempo-efectivo-en-habitacion.html" }
+    { "source": "/herramientas", "destination": "/#simulator-section", "permanent": true },
+    { "source": "/recursos/matematicas-cuadran-sistema-falla", "destination": "/recursos/fragilidad-operativa", "permanent": true },
+    { "source": "/recursos/cpor-calculo", "destination": "/recursos/cpor", "permanent": true },
+    { "source": "/recursos/lqa", "destination": "/recursos/lqa-housekeeping", "permanent": true }
   ]
 }

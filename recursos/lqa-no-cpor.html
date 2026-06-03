@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LQA no es CPOR (pero tampoco es inocente) — OTAINGENIO LAB</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Por qué los fallos de calidad no aparecen en el checklist, sino en el diseño del modelo operativo. Dónde se rompen realmente los sistemas de Housekeeping.">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.otaingenio.es/recursos/lqa-no-cpor">
+  
+  <!-- Robots -->
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.otaingenio.es/recursos/lqa-no-cpor">
+  <meta property="og:title" content="LQA no es CPOR (pero tampoco es inocente) — OTAINGENIO LAB">
+  <meta property="og:description" content="Por qué los fallos de calidad no aparecen en el checklist, sino en el diseño del modelo operativo. Dónde se rompen realmente los sistemas de Housekeeping.">
+  <meta property="og:image" content="https://www.otaingenio.es/images/og-cover.png">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Otaingenio Lab">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LQA no es CPOR (pero tampoco es inocente) — OTAINGENIO LAB">
+  <meta name="twitter:description" content="Por qué los fallos de calidad no aparecen en el checklist, sino en el diseño del modelo operativo. Dónde se rompen realmente los sistemas de Housekeeping.">
+  <meta name="twitter:image" content="https://www.otaingenio.es/images/og-cover.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link rel="apple-touch-icon" href="../images/favicon.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-158QYGR870"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-158QYGR870');
+  </script>
+
+  <style>
+    /* --- CUSTOM VARIABLES FOR THIS PAPER --- */
+    :root {
+      --primary-color: var(--color-bg-deep, #3e2e25);
+      --accent-color: var(--color-amber, #c4752a);
+      --bg-light: #fbf9f6;
+      --border-radius: 8px;
+      --alert-color: #b23b3b;
+    }
+
+    .paper-subtitle {
+      font-size: 1.35rem;
+      color: var(--color-text-muted, #7e6c61);
+      margin-top: 10px;
+      font-weight: 300;
+      border-left: 4px solid var(--accent-color);
+      padding-left: 20px;
+      line-height: 1.4;
+    }
+
+    /* --- HIGHLIGHT BOX --- */
+    .highlight-box {
+      background-color: var(--color-bg-card, rgba(255, 255, 255, 0.5));
+      border: 1px solid var(--color-border, rgba(62, 46, 37, 0.1));
+      padding: 30px;
+      margin: 35px 0;
+      border-left: 5px solid var(--accent-color);
+      border-radius: 0 var(--border-radius) var(--border-radius) 0;
+      font-style: italic;
+      font-size: 1.15rem;
+      backdrop-filter: blur(8px);
+      color: var(--color-text, #333);
+      line-height: 1.7;
+    }
+
+    .warning-text {
+      color: var(--alert-color);
+      font-weight: bold;
+    }
+
+    /* --- IMÁGENES DE ARTÍCULO --- */
+    .article-image-container {
+      margin: 40px 0;
+      text-align: center;
+    }
+
+    .article-image {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-sm, 0 4px 20px rgba(0,0,0,0.03));
+      border: 1px solid var(--color-border, rgba(62, 46, 37, 0.1));
+      display: block;
+      margin: 0 auto;
+    }
+
+    .image-caption {
+      margin-top: 12px;
+      font-size: 0.85rem;
+      color: var(--color-text-muted, #7e6c61);
+      font-style: italic;
+      font-family: var(--font-sans), sans-serif;
+    }
+
+    /* --- BOTÓN CTA --- */
+    .cta-button {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background-color: var(--primary-color);
+      color: white !important;
+      padding: 18px;
+      text-decoration: none;
+      border-radius: var(--border-radius);
+      font-family: var(--font-sans), sans-serif;
+      font-weight: bold;
+      margin-top: 40px;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-size: 0.9rem;
+    }
+    
+    .cta-button:hover { 
+      background-color: var(--accent-color);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+  </style>
+</head>
+<body class="light-theme">
+
+  <!-- Ambient background glow -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Header -->
+  <header id="main-header" class="glass-header scrolled">
+    <div class="header-container">
+      <a href="../index.html" class="brand-logo">
+        <span class="logo-accent">OTAINGENIO</span> <span class="logo-light">LAB</span>
+      </a>
+      <a href="../index.html" class="nav-btn-link">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Volver a Inicio</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Reading Container -->
+  <main class="paper-reading-container glass-card" style="margin-top: 130px;">
+    
+    <a href="../index.html" class="back-to-home">
+      <i class="fa-solid fa-arrow-left-long"></i> Volver a Otaingenio Lab
+    </a>
+
+    <article class="paper-reading-body">
+      <header class="paper-reading-header">
+        <div class="paper-meta" style="margin-bottom: 10px;">
+          <span class="paper-cat">DEBATE OPERATIVO</span>
+          <span class="paper-date font-mono">10 / FEBRERO 2026</span>
+        </div>
+        <h1 class="paper-title font-serif" style="font-size: 2.8rem; line-height: 1.2;">LQA no es CPOR (pero tampoco es inocente)</h1>
+        <div class="paper-subtitle">Dónde se rompen realmente los sistemas de Housekeeping y por qué el checklist no lo detecta.</div>
+      </header>
+
+      <section class="paper-content">
+        <p>En los últimos días ha surgido un debate interesante en el sector: <strong>¿Tiene sentido relacionar el LQA con métricas financieras como el CPOR?</strong></p>
+        
+        <p>La respuesta corta es no.<br>
+        La respuesta profesional es: <em>depende de para qué lo uses.</em></p>
+
+        <p>Y ahí está el problema.</p>
+
+        <h2>1. Lo que SÍ es el LQA (El consenso)</h2>
+        <p>El LQA tradicional es una auditoría de estándar puro y duro. Se aplica a habitaciones de entrada, clientes y áreas, y evalúa el cumplimiento visual:</p>
+
+        <div class="article-image-container">
+          <img src="https://i.postimg.cc/050tLsTj/I1.png" class="article-image" alt="Checklist tradicional">
+          <div class="image-caption">Figura 1: La visión tradicional del LQA como herramienta de control visual.</div>
+        </div>
+
+        <ul>
+          <li>¿Cama perfectamente hecha y sábanas alineadas?</li>
+          <li>¿Baño limpio sin rastros de gotas?</li>
+          <li>¿Ausencia absoluta de polvo en superficies?</li>
+        </ul>
+        <p>Es un instrumento de control de calidad, normalmente en formato checklist. <strong>Hasta aquí, nada que objetar.</strong></p>
+
+        <h2>2. Lo que el LQA NO es (y es importante dejar claro)</h2>
+        <div class="highlight-box">
+          El LQA no mide costes. No es una métrica financiera. Y lo más importante: <strong>no garantiza una buena gestión por sí solo.</strong>
+        </div>
+        <p>Un LQA perfecto puede coexistir con equipos completamente agotados, rehúsas recurrentes y un activo físico que se deteriora silenciosamente. Porque el LQA mide únicamente el <em>resultado final en un instante dado</em>, no la salud ni la sostenibilidad del sistema operativo que lo produce.</p>
+
+        <h2>3. Entonces, ¿dónde entra el problema?</h2>
+        <p>El problema crítico aparece cuando la dirección del hotel establece tres condiciones simultáneas:</p>
+        <ul>
+          <li>El estándar de calidad exigido (LQA) es sumamente alto.</li>
+          <li>El tiempo asignado por habitación (TEH) es excesivamente bajo.</li>
+          <li>El coste objetivo directo por habitación (CPOR) está comprimido al máximo.</li>
+        </ul>
+        <p>Y aun así, el informe LQA de la semana “sale bien”.</p>
+        
+        <p class="warning-text">Eso no es excelencia. Eso es deuda técnica operativa latente.</p>
+
+        <div class="article-image-container">
+          <img src="https://i.postimg.cc/L43yrpcq/I2.png" class="article-image" alt="Iceberg de calidad">
+          <div class="image-caption">Figura 2: El "Iceberg de la Calidad". La punta visible (LQA OK) oculta la deuda técnica sumergida.</div>
+        </div>
+        
+        <p>La calidad visible se está manteniendo de manera artificial a costa de algo que el checklist de paso no ve: limpiezas profundas postergadas, mantenimiento preventivo de mobiliario ignorado, o ritmos físicos humanos no sostenibles a mediano plazo.</p>
+
+        <h2>4. El error habitual: usar el LQA como fin</h2>
+        <p>Cuando el LQA se convierte únicamente en:</p>
+        <ul>
+          <li>Conseguir el “aprobado comercial”.</li>
+          <li>Evitar tener incidencias en el reporte del día.</li>
+          <li>Burocracia tranquilizadora para archivar en administración.</li>
+        </ul>
+        <p>deja de ser una herramienta de mejora real y pasa a ser un escudo de autocomplacencia. Ahí es donde los controles aleatorios (spotchecks) pierden todo su valor operativo:</p>
+        <ul>
+          <li>Se normaliza el aprobado de forma artificial.</li>
+          <li>Se invisibiliza el sobreesfuerzo del equipo.</li>
+          <li>Se rompe la trazabilidad causa-efecto de los fallos.</li>
+        </ul> 
+            
+        <h2>5. La lectura Ingenieril del LQA (aquí cambia todo)</h2>
+        <p>Desde el enfoque de la ingeniería de operaciones, el LQA no se evalúa de manera aislada.</p>
+        <p>Se cruza y contrasta con:</p>
+        <ul>
+          <li>⏱️ <strong>TEH:</strong> El tiempo real y efectivo disponible en la habitación.</li>
+          <li>💰 <strong>CPOR:</strong> El coste directo de limpieza por habitación ocupada.</li>
+        </ul>
+        
+        <div class="article-image-container">
+          <img src="https://i.postimg.cc/dQjWzYbZ/I3.png" class="article-image" alt="Tríada de ingeniería">
+          <div class="image-caption">Figura 3: El sistema Otaingenio conecta las tres variables que nunca deben leerse por separado.</div>
+        </div>
+        
+        <p>No para mezclarlos de forma arbitraria en una única cifra, sino para <strong>detectar incoherencias de diseño</strong> en el sistema operativo.</p>
+
+        <p>Por ejemplo:</p>
+        <ul>
+          <li>El CPOR disminuye.</li>
+          <li>El TEH disponible se comprime debido a ineficiencias de flujo.</li>
+          <li>El LQA empieza a concentrar fallos recurrentes en áreas muy específicas (ej. rincones de baño o reposición).</li>
+        </ul> 
+        <p>La conclusión de ingeniería es clara: <strong>el sistema no es sostenible, aunque el promedio del checklist siga "aprobando"</strong>.</p>
+
+        <h2>6. La idea clave (y aquí está el matiz importante)</h2>
+        <p>El LQA:</p>
+        <ul>
+          <li>❌ No nace del cálculo financiero del CPOR.</li>
+          <li>❌ No sustituye la necesidad de control de costes.</li>
+          <li>❌ No explica las ineficiencias del personal.</li>
+        </ul> 
+        <p>Pero <strong>es el primer sitio donde se manifiestan físicamente los excesos del sistema</strong> cuando el modelo operativo se ha tensado de forma irresponsable. No se notará en el Excel del presupuesto; se notará directamente en la habitación, ante los ojos del huésped.</p>
+
+        <h2>7. La tríada completa</h2>
+        <p>Por eso, en Otaingenio Lab no se habla de métricas aisladas, sino de sistema:</p>
+        <ul>
+          <li><strong>TEH:</strong> ¿Cuánto tiempo real de limpieza física existe hoy en el hotel?</li>
+          <li><strong>CPOR:</strong> ¿Cuánto nos cuesta operar esa limpieza directa por habitación?</li>
+          <li><strong>LQA:</strong> ¿Qué fatiga estructural y daño está apareciendo aunque visualmente todo parezca correcto?</li>
+        </ul> 
+        <p>Separadas, estas métricas dicen muy poco. Juntas, explican por completo la realidad financiera y operativa de tu hotel.</p>
+
+        <p>La calidad no se defiende con discursos corporativos ni se garantiza firmando checklists a la carrera. La calidad <strong>se diseña científicamente</strong> en la base del modelo operativo.</p>
+      </section>
+
+      <footer style="margin-top: 60px; border-top: 1px solid var(--color-border); padding-top: 30px; display: flex; justify-content: space-between; align-items: center;">
+        <span class="doctrina-libera-badge font-serif" style="font-size: 1.2rem;">"La doctrina es libre"</span>
+        <a href="lqa-housekeeping.html" class="cta-button" style="margin-top:0; width:auto; padding: 10px 20px; font-size: 0.85rem;">
+          <span>Ver el Modelo LQA de Otaingenio 👉</span>
+        </a>
+      </footer>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer id="main-footer" class="border-t" style="background:#040608; padding: 40px 24px;">
+    <div class="footer-container" style="display:flex; justify-content:space-between; max-width:820px; margin:0 auto; font-size:0.8rem; color:var(--color-text-muted);">
+      <span>© 2026 Otaingenio Lab. Doctrinas y Ensayos Operativos.</span>
+      <span>La doctrina es libre.</span>
+    </div>
+  </footer>
+
+  <!-- Structured Data: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "LQA no es CPOR (pero tampoco es inocente)",
+    "description": "Por qué los fallos de calidad no aparecen en el checklist, sino en el diseño del modelo operativo. Dónde se rompen realmente los sistemas de Housekeeping.",
+    "image": "https://www.otaingenio.es/images/og-cover.png",
+    "author": {
+      "@type": "Organization",
+      "name": "Otaingenio Lab"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Otaingenio Lab",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.otaingenio.es/images/logo.png"
+      }
+    },
+    "datePublished": "2026-02-10",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.otaingenio.es/recursos/lqa-no-cpor"
+    }
+  }
+  </script>
+</body>
+</html>

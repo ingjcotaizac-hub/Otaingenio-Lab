@@ -3,30 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fragilidad Operativa: El Esfuerzo Invisible en Pisos — OTAINGENIO LAB</title>
+  <title>Por qué la operativa hotelera siempre funciona… hasta que deja de hacerlo — OTAINGENIO LAB</title>
   
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Análisis doctrinal sobre los sistemas hoteleros sostenidos sobre el sobreesfuerzo invisible de sus equipos, y la fragilidad del planing diario.">
+  <meta name="description" content="La gestión de Housekeeping a menudo funciona gracias al sobreesfuerzo del equipo, no al diseño del sistema. Cómo la falta de alineación entre tiempos (TEH), costes (CPOR) y calidad (LQA) crea una falsa sensación de seguridad.">
   
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://www.otaingenio.es/recursos/matematicas-cuadran-sistema-falla">
+  <link rel="canonical" href="https://www.otaingenio.es/recursos/fragilidad-operativa">
   
   <!-- Robots -->
   <meta name="robots" content="index, follow">
   
   <!-- Open Graph -->
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://www.otaingenio.es/recursos/matematicas-cuadran-sistema-falla">
-  <meta property="og:title" content="Fragilidad Operativa: El Esfuerzo Invisible en Pisos — OTAINGENIO LAB">
-  <meta property="og:description" content="Análisis doctrinal sobre los sistemas hoteleros sostenidos sobre el sobreesfuerzo invisible de sus equipos, y la fragilidad del planing diario.">
+  <meta property="og:url" content="https://www.otaingenio.es/recursos/fragilidad-operativa">
+  <meta property="og:title" content="Por qué la operativa hotelera siempre funciona… hasta que deja de hacerlo — OTAINGENIO LAB">
+  <meta property="og:description" content="La gestión de Housekeeping a menudo funciona gracias al sobreesfuerzo del equipo, no al diseño del sistema. Cómo la falta de alineación entre tiempos (TEH), costes (CPOR) y calidad (LQA) crea una falsa sensación de seguridad.">
   <meta property="og:image" content="https://www.otaingenio.es/images/og-cover.png">
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="Otaingenio Lab">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Fragilidad Operativa: El Esfuerzo Invisible en Pisos — OTAINGENIO LAB">
-  <meta name="twitter:description" content="Análisis doctrinal sobre los sistemas hoteleros sostenidos sobre el sobreesfuerzo invisible de sus equipos, y la fragilidad del planing diario.">
+  <meta name="twitter:title" content="Por qué la operativa hotelera siempre funciona… hasta que deja de hacerlo — OTAINGENIO LAB">
+  <meta name="twitter:description" content="La gestión de Housekeeping a menudo funciona gracias al sobreesfuerzo del equipo, no al diseño del sistema. Cómo la falta de alineación entre tiempos (TEH), costes (CPOR) y calidad (LQA) crea una falsa sensación de seguridad.">
   <meta name="twitter:image" content="https://www.otaingenio.es/images/og-cover.png">
   
   <!-- Favicon -->
@@ -51,6 +51,138 @@
     gtag('js', new Date());
     gtag('config', 'G-158QYGR870');
   </script>
+
+  <style>
+    /* --- CUSTOM VARIABLES FOR THIS PAPER --- */
+    :root {
+      --primary-color: var(--color-bg-deep, #3e2e25);
+      --accent-color: var(--color-amber, #c4752a);
+      --alert-color: #b23b3b;
+      --bg-light: #fbf9f6;
+      --border-radius: 8px;
+    }
+
+    .paper-subtitle {
+      font-size: 1.35rem;
+      color: var(--color-text-muted, #7e6c61);
+      margin-top: 10px;
+      font-weight: 300;
+      border-left: 4px solid var(--accent-color);
+      padding-left: 20px;
+      line-height: 1.4;
+    }
+
+    /* --- GANCHO INCÓMODO --- */
+    .friction-hook {
+      font-family: var(--font-sans), sans-serif;
+      font-weight: 600;
+      color: var(--alert-color);
+      background-color: rgba(178, 59, 59, 0.04);
+      padding: 20px;
+      border: 1px dashed rgba(178, 59, 59, 0.2);
+      border-radius: var(--border-radius);
+      margin-bottom: 40px;
+      font-size: 1.05rem;
+      line-height: 1.5;
+    }
+
+    /* --- HIGHLIGHT BOX (QUOTE) --- */
+    .highlight-box {
+      background-color: var(--color-bg-card, rgba(255, 255, 255, 0.5));
+      border: 1px solid var(--color-border, rgba(62, 46, 37, 0.1));
+      padding: 30px 40px;
+      margin: 40px 0;
+      border-radius: var(--border-radius);
+      font-style: italic;
+      font-size: 1.2rem;
+      text-align: center;
+      position: relative;
+      backdrop-filter: blur(8px);
+      box-shadow: var(--shadow-sm);
+      color: var(--color-text, #333);
+      line-height: 1.7;
+    }
+    
+    .highlight-box::before {
+      content: "“";
+      font-size: 4em;
+      color: rgba(196, 117, 42, 0.15);
+      position: absolute;
+      top: -15px;
+      left: 20px;
+      font-family: var(--font-serif), serif;
+    }
+
+    /* --- CONCEPT CARD --- */
+    .concept-card {
+      background: var(--color-bg-card, rgba(255, 255, 255, 0.5));
+      border: 1px solid var(--color-border, rgba(62, 46, 37, 0.1));
+      padding: 25px;
+      margin: 20px 0;
+      border-left: 5px solid var(--primary-color);
+      border-radius: 0 var(--border-radius) var(--border-radius) 0;
+      transition: transform 0.2s ease, background-color 0.2s ease;
+      backdrop-filter: blur(8px);
+    }
+    
+    .concept-card:hover { 
+      transform: translateX(5px);
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .concept-title {
+      display: block;
+      font-family: var(--font-mono), monospace;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.8em;
+      color: var(--accent-color);
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    /* --- CTA SECTION --- */
+    .cta-section {
+      margin-top: 50px;
+      padding: 40px;
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+      color: white;
+      border-radius: var(--border-radius);
+      text-align: center;
+      box-shadow: var(--shadow-md);
+    }
+
+    .cta-intro {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    .btn-read {
+      display: inline-block;
+      text-decoration: none;
+      color: var(--primary-color) !important;
+      background-color: white;
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-family: var(--font-sans), sans-serif;
+      margin: 10px;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-read:hover { 
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+      background-color: var(--accent-color);
+      color: white !important;
+    }
+  </style>
 </head>
 <body class="light-theme">
 
@@ -84,79 +216,77 @@
           <span class="paper-cat">ESTABILIDAD OPERATIVA</span>
           <span class="paper-date font-mono">03 / JUNIO 2026</span>
         </div>
-        <h1 class="paper-title font-serif" style="font-size: 2.8rem; line-height: 1.2;">Fragilidad Operativa: El Esfuerzo Invisible en Pisos</h1>
+        <h1 class="paper-title font-serif" style="font-size: 2.8rem; line-height: 1.2;">Por qué la operativa hotelera siempre funciona… hasta que deja de hacerlo</h1>
+        <div class="paper-subtitle">La fragilidad invisible que no aparece en los KPI.</div>
       </header>
 
       <img src="../images/luxury_bed_detail.png" alt="Detalle de Habitación de Lujo" class="paper-opening-img" loading="lazy">
 
       <section class="paper-content">
-        <p>Muchos hoteles de gran categoría parecen operar en el día a día con una suavidad y pulcritud impecables. El lobby brilla, las suites lucen perfectas en el check-in y la dirección presume de eficiencia en la cuenta de resultados. Sin embargo, bajo la superficie de ese brillo, el sistema operativo del hotel se sostiene a menudo sobre un andamio sumamente inestable: **la fragilidad operativa**.</p>
-        
-        <blockquote>"Un sistema operativo es frágil si su éxito depende exclusivamente del sobreesfuerzo diario y no compensado de un equipo al límite de su capacidad física."</blockquote>
-        
-        <p>¿Qué sucede cuando una camarera de pisos o una subgobernanta falta a su puesto de trabajo? El planing del día sufre un impacto físico inmediato. Experimenta la tensión del sistema en tiempo real con este simulador interactivo:</p>
-
-        <!-- Embedded Interactive Fragility Simulation Widget -->
-        <div class="interactive-article-widget" style="margin: 40px 0;">
-          <span class="widget-label"><i class="fa-solid fa-shield-halved"></i> Diagnóstico de Tensión y Riesgo Operativo</span>
-          <div class="fragility-widget">
-            <p style="font-size:0.85rem; color:var(--color-text-muted); margin-bottom:15px;">
-              Haz clic en los nombres del personal para declarar su ausencia y observa cómo se redistribuye la carga de trabajo diaria (54 créditos en total) y cómo se dispara el indicador de riesgo de colapso.
-            </p>
-            
-            <div class="fragility-staff-toggle-grid" style="margin-bottom:20px;">
-              <button class="fragility-toggle-btn" id="frag-cam1" data-staff="cam1">
-                <span class="toggle-lbl">Ana (Cam. 1)</span>
-                <span class="toggle-status-txt text-green" id="frag-status-cam1">PRESENTE</span>
-              </button>
-              <button class="fragility-toggle-btn" id="frag-cam2" data-staff="cam2">
-                <span class="toggle-lbl">María (Cam. 2)</span>
-                <span class="toggle-status-txt text-green" id="frag-status-cam2">PRESENTE</span>
-              </button>
-              <button class="fragility-toggle-btn" id="frag-cam3" data-staff="cam3">
-                <span class="toggle-lbl">Laura (Cam. 3)</span>
-                <span class="toggle-status-txt text-green" id="frag-status-cam3">PRESENTE</span>
-              </button>
-            </div>
-
-            <div class="fragility-output-box">
-              <div class="fragility-output-metric">
-                <span class="fragility-lbl">CARGA DIARIA PROMEDIO POR PERSONA</span>
-                <span class="fragility-val text-green" id="frag-res-load">18.0 Cr</span>
-              </div>
-              <div class="fragility-output-metric">
-                <span class="fragility-lbl">ESTADO GENERAL DE RIESGO</span>
-                <span class="fragility-val text-green" id="frag-res-risk">ESTABLE</span>
-              </div>
-              <div class="fragility-status-desc font-mono" id="frag-res-desc" style="font-size:0.85rem; line-height:1.5;">
-                Carga óptima. El equipo reparte 54 créditos de trabajo diario de forma equilibrada (18.0 créditos cada una). Calidad LQA alta y fatiga controlada.
-              </div>
-            </div>
-          </div>
+        <div class="friction-hook">
+          ⚠️ Advertencia: Si tu housekeeping cumple tiempos y presupuesto hoy, pero tu equipo llega "justo" cada día al final del turno, este artículo no te va a gustar.
         </div>
 
-        <h2>La Trampa del Sobreesfuerzo Sostenido</h2>
-        <p>Cuando un hotel opera habitualmente con la plantilla al límite de su capacidad saludable, se encuentra en una situación de **riesgo sistémico**. Dirección suele asumir que "las habitaciones siempre salen", interpretando la ausencia de quejas como prueba de un proceso eficiente. En realidad, solo es prueba del sobreesfuerzo invisible de gobernantas que asumen la carga y camareras que limpian a contrarreloj.</p>
+        <p>Hay una frase peligrosa que se repite en muchas reuniones de dirección: <em>"Al final, el trabajo sale."</em></p>
+        <p>Y es cierto. Las habitaciones se entregan a las 15:00. Los huéspedes hacen check-in. El CPOR (Coste por Habitación Ocupada) cumple el presupuesto.</p>
+        <p>Mirando el cuadro de mando, el hotel es un éxito.</p>
+        <p>Pero si bajamos a la planta, la realidad es distinta. Lo que el Excel interpreta como <strong>Eficiencia</strong>, a menudo es <strong>Sobrecarga Estructural</strong>.</p>
         
-        <p>Esta fragilidad operativa se manifiesta de tres formas silenciosas pero destructivas:</p>
-        
-        <ul>
-          <li><strong>Horas extra invisibles:</strong> Personal que entra media hora antes de fichar o reduce su tiempo de descanso para poder terminar su parte de trabajo diario.</li>
-          <li><strong>Deterioro sistemático de los estándares LQA:</strong> Se recortan los detalles finos (limpieza a fondo de rincones, reposición meticulosa de amenities) para poder llegar a la hora de salida, lo que erosiona la calidad de la marca.</li>
-          <li><strong>Resentimiento y desgaste del clima laboral:</strong> La sobrecarga constante desgasta la moral del equipo de pisos, disparando la tasa de absentismo y las bajas laborales por fatiga física o estrés.</li>
-        </ul>
-        
-        <h2>Construyendo Resiliencia</h2>
-        <p>Un sistema de gestión operativa robusto no se construye exigiendo más, sino diseñando **amortiguadores operativos** y calibrando la carga real de cada habitación en créditos matemáticos equilibrados.</p>
-        
-        <p>Identificar y gestionar la fragilidad operativa es el primer paso para proteger la calidad LQA de tu hotel, estabilizar las plantillas de pisos y asegurar, en última instancia, la paz en tu cuenta de explotación financiera.</p>
+        <p>No porque una métrica sea errónea, sino porque ninguna métrica aislada explica un sistema complejo.</p>
+
+        <h2>1. La operativa que "cuadra" vs. La realidad física</h2>
+        <p>Recientemente en el análisis de un hotel urbano de 180 habitaciones. Sobre el papel, los números eran perfectos. El Excel decía que el equipo tenía tiempo de sobra.</p>
+        <p>Sin embargo, al aplicar ingeniería forense y medir la realidad, se descubrió que faltaban <strong>74 minutos reales por persona cada día</strong>.</p>
+        <p>¿Cómo es posible que el hotel siguiera abierto? Porque el equipo absorbía esa deuda. </p>
+        <p>Cuando diseñas los turnos basándote en promedios matemáticos ideales (sin contar fricción, ascensores lentos, clientes que salen tarde o falta de lencería), estás construyendo un castillo de naipes.</p>
+
+        <h2>2. La Heroicidad como Modelo de Gestión</h2>
+        <div class="highlight-box">
+          Si tu operativa depende de que alguien corra, se salte el descanso o haga un esfuerzo sobrehumano para terminar a tiempo, no tienes un sistema. Tienes suerte.
+        </div>
+        <p>A esto lo llamo <strong>"Gestión por Heroicidad"</strong>.</p>
+        <p>Funciona hoy, sí. Y funcionará mañana. Pero estás consumiendo dos activos que no aparecen en el balance contable:</p>
+        <ol>
+          <li><strong>La salud de tu equipo:</strong> Que deriva en bajas, rotación y desmotivación.</li>
+          <li><strong>La integridad de tu activo:</strong> Cuando se corre, se limpia lo que se ve, no lo que se debe mantener.</li>
+        </ol>
+
+        <h2>3. Eficiencia vs. Resiliencia</h2>
+        <p>Hemos obsesionado al sector con la Eficiencia (hacer lo máximo con lo mínimo). Cuando el CPOR se optimiza sin considerar el tiempo real disponible, se elimina la capacidad de respuesta.</p>
+        <p>Un sistema eficiente al 100% es un sistema frágil. Si un día fallan dos camareras o hay un pico de salidas sucias, la operativa colapsa.</p>
+        <p>La ingeniería busca la <strong>Resiliencia</strong>: la capacidad del sistema de absorber el caos diario sin romperse y sin quemar a las personas.</p>
+
+        <h2>4. Ordenando el caos: Por qué necesitas el Sistema Completo</h2>
+        <p>Llevo semanas hablándote de métricas sueltas. Hoy quiero que entiendas por qué <strong>ninguna sirve por sí sola</strong>.</p>
+
+        <div class="concept-card">
+          <span class="concept-title">LA BASE REAL</span>
+          <strong>TEH (Tiempo Efectivo):</strong> No es cuánto dura el turno, es cuánto tiempo real tienes para limpiar descontando la fricción. Sin esto, planificas sobre fantasía.
+        </div>
+
+        <div class="concept-card">
+          <span class="concept-title">EL LÍMITE FINANCIERO</span>
+          <strong>CPOR (Coste):</strong> Es tu presupuesto. Pero cuidado: un CPOR bajo conseguido a base de ignorar el TEH es deuda técnica.
+        </div>
+
+        <div class="concept-card">
+          <span class="concept-title">EL CHIVATO ESTRUCTURAL</span>
+          <strong>LQA (Calidad):</strong> No es un checklist en sí, sino la lectura agregada que revela cuándo el sistema ya está tensionado.
+        </div>
+
+        <div class="cta-section">
+          <p class="cta-intro">Si solo mides uno de estos tres, estás gestionando a ciegas.<br>Aquí tienes el sistema completo, pieza por pieza:</p>
+          <a href="tiempo-efectivo-habitacion.html" class="btn-read">⏱ Entender el TEH</a>
+          <a href="cpor.html" class="btn-read">💰 Analizar el CPOR</a>
+          <a href="lqa-housekeeping.html" class="btn-read">📋 Medir el LQA</a>
+        </div>
       </section>
 
       <footer style="margin-top: 60px; border-top: 1px solid var(--color-border); padding-top: 30px; display: flex; justify-content: space-between; align-items: center;">
         <span class="doctrina-libera-badge font-serif" style="font-size: 1.2rem;">"La doctrina es libre"</span>
         <a href="../index.html#program-section" class="btn-primary" style="padding: 10px 20px; font-size: 0.85rem;">
           <span>Certificación Superior de Otaingenio</span>
-          <i class="fa-solid fa-graduationcap"></i>
+          <i class="fa-solid fa-graduation-cap"></i>
         </a>
       </footer>
     </article>
@@ -170,95 +300,13 @@
     </div>
   </footer>
 
-  <!-- Localized interactive widget logic -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const fragBtns = document.querySelectorAll('.fragility-toggle-btn');
-      const fragLoad = document.getElementById('frag-res-load');
-      const fragRisk = document.getElementById('frag-res-risk');
-      const fragDesc = document.getElementById('frag-res-desc');
-
-      if (!fragBtns.length || !fragLoad) return;
-
-      const staffStatus = {
-        cam1: true,
-        cam2: true,
-        cam3: true
-      };
-
-      fragBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const staffId = btn.getAttribute('data-staff');
-          staffStatus[staffId] = !staffStatus[staffId];
-
-          const statusTxt = document.getElementById(`frag-status-${staffId}`);
-
-          if (staffStatus[staffId]) {
-            btn.classList.remove('absent');
-            statusTxt.textContent = 'PRESENTE';
-            statusTxt.className = 'toggle-status-txt text-green';
-          } else {
-            btn.classList.add('absent');
-            statusTxt.textContent = 'AUSENTE';
-            statusTxt.className = 'toggle-status-txt text-red';
-          }
-
-          recalculateFragility();
-        });
-      });
-
-      function recalculateFragility() {
-        let activeCount = 0;
-        for (const key in staffStatus) {
-          if (staffStatus[key]) activeCount++;
-        }
-
-        const totalLoad = 54.0;
-
-        if (activeCount === 3) {
-          fragLoad.textContent = '18.0 Cr';
-          fragLoad.className = 'fragility-val text-green';
-          fragRisk.textContent = 'ESTABLE';
-          fragRisk.className = 'fragility-val text-green';
-          fragDesc.innerHTML = `
-            Carga óptima. El equipo reparte 54 créditos de trabajo diario de forma equilibrada (18.0 créditos cada una). Calidad LQA alta y fatiga controlada.
-          `;
-        } else if (activeCount === 2) {
-          const loadPerPerson = totalLoad / 2;
-          fragLoad.textContent = `${loadPerPerson.toFixed(1)} Cr`;
-          fragLoad.className = 'fragility-val text-amber';
-          fragRisk.textContent = 'SOBRECARGA';
-          fragRisk.className = 'fragility-val text-amber';
-          fragDesc.innerHTML = `
-            <strong>¡Riesgo del sistema!</strong> Al faltar una persona, la carga diaria por camarera sube a <strong>${loadPerPerson.toFixed(1)} créditos</strong> (150% del límite saludable). Se incurre en fatiga física y la calidad de limpieza decae.
-          `;
-        } else if (activeCount === 1) {
-          fragLoad.textContent = '54.0 Cr';
-          fragLoad.className = 'fragility-val text-red animate-pulse';
-          fragRisk.textContent = 'COLAPSO';
-          fragRisk.className = 'fragility-val text-red animate-pulse';
-          fragDesc.innerHTML = `
-            <strong>¡Colapso operativo inminente!</strong> Una sola persona debe asumir todo el trabajo diario. Sufrirá una fatiga extrema (<strong>300% de sobrecarga</strong>). Es imposible cumplir con el servicio, el hotel dejará habitaciones sin limpiar y sufrirá quejas severas de huéspedes.
-          `;
-        } else {
-          fragLoad.textContent = 'N/A';
-          fragLoad.className = 'fragility-val text-red';
-          fragRisk.textContent = 'INOPERATIVO';
-          fragRisk.className = 'fragility-val text-red';
-          fragDesc.innerHTML = `
-            <strong>Cierre total de operaciones del hotel.</strong> No hay camareras disponibles. El departamento de pisos está 100% paralizado, afectando de inmediato los check-ins y hundiendo la reputación y los ingresos del día.
-          `;
-        }
-      }
-    });
-  </script>
   <!-- Structured Data: Article -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Fragilidad Operativa: El Esfuerzo Invisible en Pisos",
-    "description": "Análisis doctrinal sobre los sistemas hoteleros sostenidos sobre el sobreesfuerzo invisible de sus equipos, y la fragilidad del planing diario.",
+    "headline": "Por qué la operativa hotelera siempre funciona… hasta que deja de hacerlo",
+    "description": "La gestión de Housekeeping a menudo funciona gracias al sobreesfuerzo del equipo, no al diseño del sistema. Cómo la falta de alineación entre tiempos (TEH), costes (CPOR) y calidad (LQA) crea una falsa sensación de seguridad.",
     "image": "https://www.otaingenio.es/images/og-cover.png",
     "author": {
       "@type": "Organization",
@@ -275,7 +323,7 @@
     "datePublished": "2026-06-01",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.otaingenio.es/recursos/matematicas-cuadran-sistema-falla"
+      "@id": "https://www.otaingenio.es/recursos/fragilidad-operativa"
     }
   }
   </script>
