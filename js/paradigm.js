@@ -61,7 +61,7 @@ export function initParadigm() {
       modeStatus.className = 'info-status font-mono text-green';
       deviationVal.textContent = '±0%';
       deviationVal.className = 'text-green';
-      fatigueVal.textContent = 'NINUNO';
+      fatigueVal.textContent = 'NINGUNO';
       fatigueVal.className = 'text-green';
     } else {
       modeTitle.textContent = 'Modelo Clásico (18 Habitaciones Fijas por Trabajador)';
