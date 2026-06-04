@@ -1549,7 +1549,7 @@ ul {
 }
 
 .accordion-item.active .accordion-body {
-  max-height: 200px;
+  max-height: 800px;
 }
 
 .accordion-body p {

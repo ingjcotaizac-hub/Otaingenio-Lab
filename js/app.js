@@ -246,4 +246,26 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // Accordion Controller
+  const accordionHeaders = document.querySelectorAll('.accordion-header');
+  accordionHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.accordion-item');
+      const isActive = item.classList.contains('active');
+      
+      // Close other accordions
+      document.querySelectorAll('.accordion-item').forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.classList.remove('active');
+          const otherHeader = otherItem.querySelector('.accordion-header');
+          if (otherHeader) otherHeader.setAttribute('aria-expanded', 'false');
+        }
+      });
+      
+      // Toggle current accordion
+      item.classList.toggle('active');
+      header.setAttribute('aria-expanded', isActive ? 'false' : 'true');
+    });
+  });
 });
