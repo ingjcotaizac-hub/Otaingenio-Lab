@@ -67,4 +67,12 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Landing de tráfico: LTI & Security Kit -->
+  <url>
+    <loc>https://www.otaingenio.es/moodle-lti</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
