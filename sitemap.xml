@@ -59,4 +59,12 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Landing de tráfico: Moodle Kit -->
+  <url>
+    <loc>https://www.otaingenio.es/moodle-kit</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
