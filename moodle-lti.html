@@ -131,45 +131,276 @@
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      margin-bottom: 8px;
+      margin-bottom: 14px;
     }
     .arch-box.moodle .arch-box-title { color: var(--accent-blue); }
     .arch-box.tool  .arch-box-title  { color: var(--accent); }
-    .arch-box-role {
-      font-size: 0.8rem;
-      color: var(--color-text-muted);
+    
+    /* Estilos del diagrama simétrico */
+    .arch-box-content {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
-    .arch-box-action {
+    .arch-box-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-align: left;
+    }
+    .arch-box-item .item-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.1rem;
+      font-weight: 800;
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .moodle .item-num {
+      background: rgba(84, 160, 255, 0.15);
+      color: var(--accent-blue);
+    }
+    .tool .item-num {
+      background: rgba(255, 159, 67, 0.15);
+      color: var(--accent);
+    }
+    .arch-box-item .item-desc {
+      display: flex;
+      flex-direction: column;
+    }
+    .arch-box-item .item-desc strong {
       font-size: 0.82rem;
       color: var(--color-text, #e6edf3);
-      font-weight: 600;
-      margin-top: 10px;
-      line-height: 1.4;
+    }
+    .light-theme .arch-box-item .item-desc strong {
+      color: #1f2937;
+    }
+    .arch-box-item .item-desc span {
+      font-size: 0.72rem;
+      color: var(--color-text-muted, #8a9bb0);
+    }
+    .arch-box-divider {
+      height: 1px;
+      background: rgba(255, 255, 255, 0.06);
+      width: 100%;
+    }
+    .light-theme .arch-box-divider {
+      background: rgba(0, 0, 0, 0.06);
     }
     .arch-arrows {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 16px;
-      padding: 0 16px;
+      gap: 32px;
+      padding: 0 24px;
     }
-    .arrow-row {
+    .arrow-container {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.68rem;
-      white-space: nowrap;
+      font-size: 0.7rem;
+      width: 100%;
+      text-align: center;
     }
-    .arrow-row.right { color: var(--accent-blue); }
-    .arrow-row.left  { color: var(--accent); }
-    .arrow-line {
-      width: 100px;
-      height: 1px;
+    .arrow-container.right-dir { color: var(--accent-blue); }
+    .arrow-container.left-dir { color: var(--accent); }
+    .arrow-text {
+      font-weight: 600;
+      white-space: nowrap;
+      letter-spacing: 0.02em;
+    }
+    .arrow-line-custom {
+      height: 2px;
+      width: 170px;
+      background: currentColor;
       position: relative;
     }
-    .arrow-row.right .arrow-line { background: var(--accent-blue); }
-    .arrow-row.left  .arrow-line { background: var(--accent); }
+    .arrow-line-custom::after {
+      content: '';
+      position: absolute;
+      top: -4px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+    .right-dir .arrow-line-custom::after {
+      right: -2px;
+      border-width: 5px 0 5px 8px;
+      border-color: transparent transparent transparent currentColor;
+    }
+    .left-dir .arrow-line-custom::after {
+      left: -2px;
+      border-width: 5px 8px 5px 0;
+      border-color: transparent currentColor transparent transparent;
+    }
+
+    /* Alerta del Paso 1 */
+    .step-warning-callout {
+      background: rgba(238, 82, 83, 0.05);
+      border: 1px solid rgba(238, 82, 83, 0.2);
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 16px;
+      font-size: 0.85rem;
+      line-height: 1.55;
+      color: var(--color-text-muted);
+    }
+    .step-warning-callout i {
+      color: #ee5253;
+      margin-right: 6px;
+    }
+    .light-theme .step-warning-callout {
+      background: rgba(238, 82, 83, 0.03);
+      border-color: rgba(238, 82, 83, 0.15);
+    }
+
+    /* ---- NEWSLETTER FORM STYLES ---- */
+    .newsletter-box {
+      background: linear-gradient(135deg, #0d131a 0%, #16222f 100%);
+      border: 1px solid rgba(255, 159, 67, 0.15);
+      border-radius: 14px;
+      padding: 36px 30px;
+      margin: 48px 0;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+    .light-theme .newsletter-box {
+      background: linear-gradient(135deg, #f3f6f9 0%, #e7ecf2 100%);
+      border-color: rgba(0, 0, 0, 0.08);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+    .newsletter-box::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -30%;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 159, 67, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .newsletter-title {
+      font-family: var(--font-serif, serif);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 10px;
+      line-height: 1.25;
+    }
+    .light-theme .newsletter-title {
+      color: #1f2937;
+    }
+    .newsletter-desc {
+      font-size: 0.92rem;
+      color: var(--color-text-muted, #8a9bb0);
+      margin: 0 0 24px;
+      line-height: 1.6;
+      max-width: 520px;
+    }
+    .newsletter-form-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .newsletter-row {
+      display: flex;
+      gap: 12px;
+      width: 100%;
+    }
+    .newsletter-input-wrapper {
+      position: relative;
+      flex: 1;
+    }
+    .newsletter-input-wrapper i {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgba(255, 255, 255, 0.35);
+      font-size: 0.9rem;
+    }
+    .light-theme .newsletter-input-wrapper i {
+      color: rgba(0, 0, 0, 0.35);
+    }
+    .newsletter-input {
+      width: 100%;
+      padding: 13px 16px 13px 40px;
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      color: #fff;
+      font-size: 0.9rem;
+      outline: none;
+      transition: all 0.25s ease;
+    }
+    .light-theme .newsletter-input {
+      background: #fff;
+      border-color: rgba(0, 0, 0, 0.12);
+      color: #1f2937;
+    }
+    .newsletter-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(255, 159, 67, 0.15);
+      background: rgba(0, 0, 0, 0.4);
+    }
+    .light-theme .newsletter-input:focus {
+      background: #fff;
+      box-shadow: 0 0 0 3px rgba(255, 159, 67, 0.1);
+    }
+    .newsletter-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #0d0f14;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 13px 24px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      letter-spacing: 0.03em;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+      text-transform: uppercase;
+    }
+    .newsletter-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 15px rgba(255, 159, 67, 0.3);
+    }
+    .newsletter-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+    .newsletter-privacy {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.72rem;
+      color: var(--color-text-muted);
+      cursor: pointer;
+      user-select: none;
+      margin-top: 4px;
+    }
+    .newsletter-privacy input {
+      margin-top: 2px;
+      accent-color: var(--accent);
+    }
+    .newsletter-privacy a {
+      color: var(--accent);
+      text-decoration: underline;
+    }
 
     /* ---- STEP CARDS ---- */
     .steps-container {
@@ -516,27 +747,67 @@
         <p style="font-size:0.92rem; color:var(--color-text-muted); margin-bottom:16px;">LTI 1.3 se basa en OAuth2 + OpenID Connect. La confianza se construye emparejando 4 bloques de datos entre ambos lados.</p>
 
         <div class="arch-diagram">
-          <span class="arch-diagram-label"><i class="fa-solid fa-diagram-project" style="margin-right:6px;"></i> Flujo de registro LTI 1.3</span>
+          <span class="arch-diagram-label"><i class="fa-solid fa-diagram-project" style="margin-right:6px;"></i> Flujo de registro simétrico LTI 1.3</span>
           <div class="arch-grid">
+            
+            <!-- CAJA IZQUIERDA: MOODLE -->
             <div class="arch-box moodle">
-              <div class="arch-box-title">Moodle</div>
-              <div class="arch-box-role">Plataforma / Consumidor</div>
-              <div class="arch-box-action">① Genera URLs clave<br><br>③ Despliega Client ID</div>
+              <div class="arch-box-title">Moodle (Plataforma)</div>
+              <div class="arch-box-content">
+                <div class="arch-box-item">
+                  <span class="item-num">①</span>
+                  <div class="item-desc">
+                    <strong>Genera parámetros iniciales</strong>
+                    <span>Las URLs de Moodle</span>
+                  </div>
+                </div>
+                <div class="arch-box-divider"></div>
+                <div class="arch-box-item">
+                  <span class="item-num">④</span>
+                  <div class="item-desc">
+                    <strong>Registra las claves del proveedor</strong>
+                    <span>El Keyset URL externo</span>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            <!-- EN EL MEDIO: LAS FLECHAS DE IDA Y VUELTA -->
             <div class="arch-arrows">
-              <div class="arrow-row right">
-                <span>① Copiar a →</span>
+              <div class="arrow-container right-dir">
+                <span class="arrow-text">① Enviar URLs de Moodle</span>
+                <div class="arrow-line-custom"></div>
+                <span class="arrow-text">② Configurar en la Tool</span>
               </div>
-              <div style="height:1px; width:80px; background:rgba(255,255,255,0.1);"></div>
-              <div class="arrow-row left">
-                <span>← Copiar a ②</span>
+              <div class="arrow-container left-dir">
+                <span class="arrow-text">④ Guardar en Moodle</span>
+                <div class="arrow-line-custom"></div>
+                <span class="arrow-text">③ Copiar Client ID y Keyset</span>
               </div>
             </div>
+
+            <!-- CAJA DERECHA: HERRAMIENTA EXTERNA -->
             <div class="arch-box tool">
-              <div class="arch-box-title">Vercel / Tool</div>
-              <div class="arch-box-role">Proveedor / Tool Provider</div>
-              <div class="arch-box-action">② Registra la plataforma<br><br>④ Activa el enlace</div>
+              <div class="arch-box-title">Vercel / Tool (Proveedor)</div>
+              <div class="arch-box-content">
+                <div class="arch-box-item">
+                  <span class="item-num">②</span>
+                  <div class="item-desc">
+                    <strong>Configuración &amp; Claves</strong>
+                    <span>Recibe datos y genera Client ID / Claves</span>
+                  </div>
+                </div>
+                <div class="arch-box-divider"></div>
+                <div class="arch-box-item">
+                  <span class="item-num">③</span>
+                  <div class="item-desc">
+                    <strong>Despliega URLs de retorno</strong>
+                    <span>URLs de la Tool a Moodle</span>
+                  </div>
+                </div>
+              </div>
             </div>
+
           </div>
         </div>
 
@@ -569,6 +840,10 @@
                     <div class="data-field-desc">La dirección segura a la que Moodle enviará al usuario una vez aprobado el token de seguridad.</div>
                   </div>
                 </div>
+              </div>
+              
+              <div class="step-warning-callout">
+                <strong>⚠️ Nota técnica crítica:</strong> LTI 1.3 utiliza protocolos de seguridad avanzados basados en OAuth2. Es estrictamente obligatorio que tanto Moodle como tu proveedor externo (Vercel, etc.) funcionen bajo protocolo seguro <strong>HTTPS</strong> (con certificado SSL activo). Si intentas configurarlo en entornos HTTP locales, el navegador bloqueará las cookies de sesión (política SameSite) y el inicio de sesión fallará silenciosamente.
               </div>
             </div>
           </div>
@@ -735,6 +1010,28 @@
 <span class="t-keyword">&lt;/script&gt;</span></pre>
         </div>
 
+        <!-- NEWSLETTER CARD -->
+        <div class="newsletter-box">
+          <h3 class="newsletter-title">¿Quieres recibir los siguientes recursos de Moodle &amp; Seguridad?</h3>
+          <p class="newsletter-desc">Suscríbete gratis. Enviamos solo herramientas, scripts y doctrina operativa real para formación online directamente a tu bandeja de entrada. Cero spam.</p>
+          <form id="newsletter-form" class="newsletter-form-container">
+            <div class="newsletter-row">
+              <div class="newsletter-input-wrapper">
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" class="newsletter-input" placeholder="Introduce tu correo electrónico" required>
+              </div>
+              <button type="submit" class="newsletter-btn">
+                <span>Suscribirme</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </div>
+            <label class="newsletter-privacy">
+              <input type="checkbox" required>
+              <span>Acepto recibir correos y la <a href="/politica-de-privacidad" target="_blank">política de privacidad</a>.</span>
+            </label>
+          </form>
+        </div>
+
         <!-- RELATED ARTICLES -->
         <div class="section-divider">
           <div class="section-divider-line"></div>
@@ -839,6 +1136,58 @@ document.addEventListener("DOMContentLoaded", function() {
         alert('No se pudo copiar automáticamente. Selecciona el código manualmente.');
       });
     }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const newsForm = document.getElementById('newsletter-form');
+      if (newsForm) {
+        newsForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const emailInput = newsForm.querySelector('input[type="email"]');
+          const email = emailInput.value;
+          const button = newsForm.querySelector('button');
+          const buttonText = button.innerHTML;
+          button.disabled = true;
+          button.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Procesando...';
+
+          fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+              access_key: '31845bf2-8f66-4ddd-9162-dbd9b5808660',
+              email: email,
+              subject: 'Nuevo suscriptor Moodle LTI - Otaingenio Lab',
+              from_name: 'Otaingenio Lab'
+            })
+          })
+          .then(async (response) => {
+            if (response.status == 200) {
+              newsForm.innerHTML = `
+                <div class="success-message" style="animation: fadeIn 0.4s ease forwards; text-align: center; padding: 10px 0;">
+                  <i class="fa-solid fa-circle-check" style="color:#10ac84; font-size: 2rem; margin-bottom: 12px; display: block;"></i>
+                  <h4 style="margin: 0 0 6px; color: var(--color-text, #fff); font-family: var(--font-serif);">¡Suscripción completada!</h4>
+                  <p style="margin: 0; font-size: 0.88rem; color:var(--color-text-muted);">Te avisaremos tan pronto como publiquemos nuevos recursos.</p>
+                </div>
+              `;
+            } else {
+              const json = await response.json();
+              console.log(json);
+              button.disabled = false;
+              button.innerHTML = buttonText;
+              alert('Hubo un error al procesar tu suscripción. Por favor, inténtalo de nuevo.');
+            }
+          })
+          .catch(error => {
+            console.log(error);
+            button.disabled = false;
+            button.innerHTML = buttonText;
+            alert('Error de conexión. Por favor, inténtalo de nuevo.');
+          });
+        });
+      }
+    });
   </script>
 
 </body>

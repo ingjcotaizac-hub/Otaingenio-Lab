@@ -263,47 +263,154 @@
       flex-shrink: 0;
     }
 
-    /* ---- CTA ---- */
-    .cta-footer-box {
-      background: linear-gradient(135deg, #0f1923 0%, #1a2535 100%);
-      border: 1px solid rgba(255,159,67,0.2);
-      border-radius: 12px;
-      padding: 36px;
-      text-align: center;
-      margin: 44px 0 20px;
+    /* ---- NEWSLETTER FORM STYLES ---- */
+    .newsletter-box {
+      background: linear-gradient(135deg, #0d131a 0%, #16222f 100%);
+      border: 1px solid rgba(255, 159, 67, 0.15);
+      border-radius: 14px;
+      padding: 36px 30px;
+      margin: 48px 0;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
     }
-    .cta-footer-box h3 {
-      color: #fff;
+    .light-theme .newsletter-box {
+      background: linear-gradient(135deg, #f3f6f9 0%, #e7ecf2 100%);
+      border-color: rgba(0, 0, 0, 0.08);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+    .newsletter-box::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -30%;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 159, 67, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .newsletter-title {
       font-family: var(--font-serif, serif);
-      font-size: 1.7rem;
-      margin: 0 0 12px;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 10px;
+      line-height: 1.25;
     }
-    .cta-footer-box p {
+    .light-theme .newsletter-title {
+      color: #1f2937;
+    }
+    .newsletter-desc {
+      font-size: 0.92rem;
       color: var(--color-text-muted, #8a9bb0);
-      font-size: 0.95rem;
       margin: 0 0 24px;
-      max-width: 480px;
-      margin-left: auto;
-      margin-right: auto;
+      line-height: 1.6;
+      max-width: 520px;
     }
-    .btn-cta-amber {
+    .newsletter-form-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .newsletter-row {
+      display: flex;
+      gap: 12px;
+      width: 100%;
+    }
+    .newsletter-input-wrapper {
+      position: relative;
+      flex: 1;
+    }
+    .newsletter-input-wrapper i {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgba(255, 255, 255, 0.35);
+      font-size: 0.9rem;
+    }
+    .light-theme .newsletter-input-wrapper i {
+      color: rgba(0, 0, 0, 0.35);
+    }
+    .newsletter-input {
+      width: 100%;
+      padding: 13px 16px 13px 40px;
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      color: #fff;
+      font-size: 0.9rem;
+      outline: none;
+      transition: all 0.25s ease;
+    }
+    .light-theme .newsletter-input {
+      background: #fff;
+      border-color: rgba(0, 0, 0, 0.12);
+      color: #1f2937;
+    }
+    .newsletter-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(255, 159, 67, 0.15);
+      background: rgba(0, 0, 0, 0.4);
+    }
+    .light-theme .newsletter-input:focus {
+      background: #fff;
+      box-shadow: 0 0 0 3px rgba(255, 159, 67, 0.1);
+    }
+    .newsletter-btn {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
       background: var(--accent);
       color: #0d0f14;
-      font-weight: 800;
+      font-weight: 700;
       font-size: 0.85rem;
-      padding: 13px 28px;
+      padding: 13px 24px;
+      border: none;
       border-radius: 8px;
-      text-decoration: none;
+      cursor: pointer;
       letter-spacing: 0.03em;
-      transition: all 0.2s ease;
+      transition: all 0.25s ease;
+      white-space: nowrap;
       text-transform: uppercase;
     }
-    .btn-cta-amber:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(255,159,67,0.35);
+    .newsletter-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 15px rgba(255, 159, 67, 0.3);
+    }
+    .newsletter-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+    .newsletter-privacy {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.72rem;
+      color: var(--color-text-muted);
+      cursor: pointer;
+      user-select: none;
+      margin-top: 4px;
+    }
+    .newsletter-privacy input {
+      margin-top: 2px;
+      accent-color: var(--accent);
+    }
+    .newsletter-privacy a {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+    @media (max-width: 640px) {
+      .newsletter-row {
+        flex-direction: column;
+      }
+      .newsletter-btn {
+        width: 100%;
+      }
     }
 
     /* ---- LIGHT THEME overrides ---- */
@@ -319,8 +426,6 @@
     .light-theme .how-card      { background: rgba(0,0,0,0.02); border-color: rgba(0,0,0,0.08); }
     .light-theme .intro-callout { background: rgba(255,159,67,0.07); color: #555; }
     .light-theme .intro-callout strong { color: #222; }
-    .light-theme .cta-footer-box { background: linear-gradient(135deg, #f0f4f8 0%, #e8eef5 100%); }
-    .light-theme .cta-footer-box h3 { color: #1a2535; }
     .light-theme .path-highlight { background: rgba(0,0,0,0.06); border-color: rgba(0,0,0,0.1); }
     /* ---- RELATED ARTICLES ---- */
     .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 36px 0 0; }
@@ -510,13 +615,26 @@
           </div>
         </div>
 
-        <!-- CTA -->
-        <div class="cta-footer-box">
-          <h3>¿Montando tu Moodle Kit hotelero?</h3>
-          <p>En Otaingenio Lab publicamos recursos, scripts y metodología operativa para formadores y directivos del sector.</p>
-          <a href="/" class="btn-cta-amber">
-            <i class="fa-solid fa-flask"></i> Ver todos los recursos
-          </a>
+        <!-- NEWSLETTER CARD -->
+        <div class="newsletter-box">
+          <h3 class="newsletter-title">¿Quieres recibir los siguientes recursos de Moodle &amp; Seguridad?</h3>
+          <p class="newsletter-desc">Suscríbete gratis. Enviamos solo herramientas, scripts y doctrina operativa real para formación online directamente a tu bandeja de entrada. Cero spam.</p>
+          <form id="newsletter-form" class="newsletter-form-container">
+            <div class="newsletter-row">
+              <div class="newsletter-input-wrapper">
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" class="newsletter-input" placeholder="Introduce tu correo electrónico" required>
+              </div>
+              <button type="submit" class="newsletter-btn">
+                <span>Suscribirme</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </div>
+            <label class="newsletter-privacy">
+              <input type="checkbox" required>
+              <span>Acepto recibir correos y la <a href="/politica-de-privacidad" target="_blank">política de privacidad</a>.</span>
+            </label>
+          </form>
         </div>
 
         <!-- RELATED ARTICLES -->
@@ -624,6 +742,58 @@ document.addEventListener("DOMContentLoaded", function() {
         alert('No se pudo copiar automáticamente. Selecciona el código manualmente con Ctrl+A.');
       });
     }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const newsForm = document.getElementById('newsletter-form');
+      if (newsForm) {
+        newsForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const emailInput = newsForm.querySelector('input[type="email"]');
+          const email = emailInput.value;
+          const button = newsForm.querySelector('button');
+          const buttonText = button.innerHTML;
+          button.disabled = true;
+          button.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Procesando...';
+
+          fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+              access_key: '31845bf2-8f66-4ddd-9162-dbd9b5808660',
+              email: email,
+              subject: 'Nuevo suscriptor Moodle Kit - Otaingenio Lab',
+              from_name: 'Otaingenio Lab'
+            })
+          })
+          .then(async (response) => {
+            if (response.status == 200) {
+              newsForm.innerHTML = `
+                <div class="success-message" style="animation: fadeIn 0.4s ease forwards; text-align: center; padding: 10px 0;">
+                  <i class="fa-solid fa-circle-check" style="color:#10ac84; font-size: 2rem; margin-bottom: 12px; display: block;"></i>
+                  <h4 style="margin: 0 0 6px; color: var(--color-text, #fff); font-family: var(--font-serif);">¡Suscripción completada!</h4>
+                  <p style="margin: 0; font-size: 0.88rem; color:var(--color-text-muted);">Te avisaremos tan pronto como publiquemos nuevos recursos.</p>
+                </div>
+              `;
+            } else {
+              const json = await response.json();
+              console.log(json);
+              button.disabled = false;
+              button.innerHTML = buttonText;
+              alert('Hubo un error al procesar tu suscripción. Por favor, inténtalo de nuevo.');
+            }
+          })
+          .catch(error => {
+            console.log(error);
+            button.disabled = false;
+            button.innerHTML = buttonText;
+            alert('Error de conexión. Por favor, inténtalo de nuevo.');
+          });
+        });
+      }
+    });
   </script>
 
 </body>
